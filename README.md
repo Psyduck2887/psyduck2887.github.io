@@ -11,6 +11,26 @@
 - [GitHub Pages](https://pages.github.com/) —— 站点托管
 - [GitHub Actions](https://github.com/features/actions) —— 自动构建与部署
 
+## 关于 Hexo
+
+[Hexo](https://hexo.io/) 是一个**静态站点生成器（SSG）**——把 Markdown 文章 + 主题模板，一次性"编译"成纯静态的 HTML/CSS/JS 文件。
+
+**印刷机比喻：**
+
+| 角色 | 比喻 |
+|---|---|
+| Markdown 文章 | 书稿 |
+| NexT 主题 | 排版模板 |
+| Hexo | 印刷机（书稿 + 模板 → 成书） |
+| `public/` 目录 | 印好的成书（HTML） |
+| GitHub Pages | 书店（摆书给读者翻） |
+
+Hexo 只在"印刷"环节运行一次（`hexo generate`），印完就下班。访客访问的是现成的 HTML，**不需要 Hexo 在背后运行**——所以本博客无后端、无数据库、不用管服务器。
+
+**和 GitHub 的关系**：Hexo 与 GitHub 互不认识。是 GitHub Actions（CI 服务）在云端调用 Hexo 生成 HTML，再交给 Pages 托管。换别的框架（Hugo/Jekyll）或手写 HTML 也行，Hexo 只是这里选用的"翻译机"。
+
+> 本文件位于项目根目录，**不会显示在博客网页上**（Hexo 只渲染 `source/` 下的内容）。
+
 ## 工作流
 
 ```
