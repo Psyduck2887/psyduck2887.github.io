@@ -36,7 +36,7 @@
 
 ### 环境要求
 
-- Node.js（建议 LTS 版本，CI 使用 Node 20）
+- Node.js（建议 LTS 版本，CI 使用 Node 22）
 
 ### 安装依赖
 
@@ -46,12 +46,24 @@ npm install
 
 ### 本地预览
 
+有两种预览方式，配合使用最舒服：
+
+**方式一：VS Code Markdown 预览（看文章结构）**
+
+在 VS Code 打开 md 文件，按 `Cmd+K` 然后按 `V`，侧边打开预览，边写边看 Markdown 结构实时更新。适合快速写内容、查错别字。
+
+**方式二：hexo server（看博客最终样式）**
+
 ```bash
 npm run server
 # 或 npx hexo server
 ```
 
-浏览器打开 <http://localhost:4000> 查看效果。
+浏览器打开 <http://localhost:4000>，看到的是套了 NexT 主题的最终效果（访客看到的样子）。
+
+> 已安装 `hexo-browsersync` 插件，**支持热重载**：修改 md 保存后浏览器自动刷新，无需手动刷新。
+
+**推荐工作流**：写的时候用 VS Code 侧边预览看结构；想看主题样式时开 hexo server。
 
 ### 写新文章
 
@@ -105,7 +117,7 @@ git push
 
 1. `npx hexo new post "标题"` 生成文章草稿
 2. 编辑 `source/_posts/标题.md` 写正文
-3. `npx hexo server` 本地预览（http://localhost:4000）
+3. `npx hexo server` 本地预览（http://localhost:4000，支持热重载）
 4. 满意后发布：
 
    ```bash
