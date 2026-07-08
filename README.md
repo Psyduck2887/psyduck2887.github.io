@@ -2,7 +2,7 @@
 
 > 个人技术博客，记录学习笔记、项目实践与踩坑总结。
 
-🌐 线上地址：<https://psyduck2887.github.io>
+🌐 线上地址：<https://humpy.site>
 
 ## 技术栈
 
@@ -127,7 +127,7 @@ git push
 | `title` | 博客标题 | Psyduck2887's Blog |
 | `description` | 站点描述（SEO） | Psyduck2887 的个人技术博客 |
 | `author` | 作者 | Psyduck2887 |
-| `url` | 站点 URL | https://psyduck2887.github.io |
+| `url` | 站点 URL | https://humpy.site |
 | `permalink` | 文章链接格式 | posts/:title/ |
 | `theme` | 主题 | next |
 
