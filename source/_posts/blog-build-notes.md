@@ -29,9 +29,9 @@ categories:
 - 基于 Node.js，前端友好
 - 主题插件多
 
-### 2. 主题：NexT
+### 2. 主题：Anatolo
 
-NexT 是 Hexo 最经典的主题，功能全面、文档完善，适合技术博客。
+当前博客基于 Anatolo 做了二次改造，重点是深色极简布局、固定左侧导航、紧凑个人信息区，以及更适合技术博客阅读的正文区域。
 
 ### 3. 部署：GitHub Actions
 
@@ -57,7 +57,7 @@ NexT 是 Hexo 最经典的主题，功能全面、文档完善，适合技术博
 ├── package.json
 ├── source/
 │   └── _posts/          # 文章目录
-├── themes/              # 主题
+├── themes/Anatolo/      # 当前主题
 └── .github/workflows/   # CI 配置
 ```
 

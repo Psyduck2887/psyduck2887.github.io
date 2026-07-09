@@ -59,7 +59,7 @@ hexo clean && hexo generate && hexo server
 | 工具 | 用途 | 说明 |
 |------|------|------|
 | Hexo | 站点生成 | 基于 Node.js |
-| NexT | 主题 | 简洁美观 |
+| Anatolo | 主题 | 深色极简 |
 | Pages | 托管 | 免费静态托管 |
 
 ## 引用
@@ -72,7 +72,7 @@ hexo clean && hexo generate && hexo server
 
 [Hexo 官网](https://hexo.io)
 
-[NexT 主题](https://theme-next.js.org)
+[Anatolo 主题](https://github.com/Lhcfl/hexo-theme-anatolo)
 
 ## 分割线
 

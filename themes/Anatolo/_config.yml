@@ -1,0 +1,64 @@
+keywords: Blog,Hexo,技术博客,学习笔记
+author: Psyduck2887
+description: 个人技术博客，记录学习笔记、项目实践与踩坑总结。
+defaultTheme: dark
+
+favicon: /images/favicon.webp
+avatar: /images/logo.webp
+logo_dir: /images/logo@2x.webp
+logo_style: width:92px;
+
+copyright:
+  show: false
+  default: '本文采用CC-BY-SA-3.0协议，转载请注明出处'
+  show_author: true
+
+footbar:
+  copyright: '© Psyduck2887'
+  beian:
+  gongan:
+
+social:
+  github: https://github.com/Psyduck2887
+  mail:
+  zhihu:
+  qq:
+  twitter:
+  instagram:
+  rss:
+  facebook:
+  weibo:
+
+menu:
+  首页: /
+  归档: /archives
+  分类: /categories
+  标签: /tags
+
+rightbtn:
+  back: true
+  search: true
+  avatar: false
+  darkLightToggle: true
+
+useSummary: true
+useTagCloud: false
+tocMaxDepth: 4
+
+always_enable_comments: false
+
+duoshuo:
+disqus:
+gentie:
+valine:
+  enable: false
+  appid:
+  appkey:
+  notify: false
+  verify: false
+  avatar: mm
+  placeholder: hello, world
+gitment:
+gitalk:
+
+Baidutongji: false

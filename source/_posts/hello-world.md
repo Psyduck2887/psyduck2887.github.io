@@ -16,7 +16,7 @@ categories:
 本博客使用以下技术栈搭建：
 
 - **Hexo** —— 静态站点生成器
-- **NexT** —— 博客主题
+- **Anatolo** —— 博客主题
 - **GitHub Pages** —— 站点托管
 - **GitHub Actions** —— 自动构建与部署
 

@@ -1,0 +1,68 @@
+@mixin percentageColor($name, $c1, $c2) {
+  @for $i from 1 to 20 {
+    #{--#{$name}-#{$i*50}}: mix($c1, $c2, $i * 5%);
+  }
+}
+
+@mixin genColor($name, $c1, $c2) {
+  #{--#{$name}-rgb}: join($c1, (), comma);
+  #{--#{$name}}: rgb($c1);
+  @include percentageColor($name, rgb($c1), rgb($c2));
+
+  #{--#{$name}-high}: mix(rgb($c1), rgb($c2), 90%);
+  #{--#{$name}-midium}: mix(rgb($c1), rgb($c2), 70%);
+  #{--#{$name}-low-mid}: mix(rgb($c1), rgb($c2), 50%);
+  #{--#{$name}-low}: mix(rgb($c1), rgb($c2), 20%);
+  #{--#{$name}-very-low}: mix(rgb($c1), rgb($c2), 0.05%);
+}
+
+@mixin darkTheme() {
+  $primary: 229 234 242;
+  $secondary: 10 13 18;
+  $tertiary: 88 166 255;
+  @include genColor('primary', $primary, $secondary);
+  @include genColor('secondary', $secondary, $primary);
+  @include genColor('tertiary', $tertiary, $secondary);
+  --surface: #0f141b;
+  --surface-soft: #151b24;
+  --border-subtle: rgba(148, 163, 184, 0.16);
+  --text-strong: #f4f7fb;
+  --text-main: #c7d0dc;
+  --text-muted: #8f9bac;
+  --accent: #58a6ff;
+  --accent-soft: rgba(88, 166, 255, 0.14);
+}
+
+@mixin lightTheme() {
+  $primary: 22 22 22;
+  $secondary: 255 255 255;
+  $tertiary: 71 134 214;
+  @include genColor('primary', $primary, $secondary);
+  @include genColor('secondary', $secondary, $primary);
+  @include genColor('tertiary', $tertiary, $secondary);
+  --surface: #ffffff;
+  --surface-soft: #f6f8fb;
+  --border-subtle: rgba(15, 23, 42, 0.12);
+  --text-strong: #111827;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.1);
+}
+
+html[theme='default'] {
+  @include lightTheme();
+}
+@media (prefers-color-scheme: dark) {
+  html[theme='default'] {
+    @include darkTheme();
+  }
+}
+
+html[theme='dark'] {
+  @include darkTheme();
+}
+
+html[theme='light'] {
+  @include lightTheme();
+}

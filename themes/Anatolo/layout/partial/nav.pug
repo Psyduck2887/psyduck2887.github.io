@@ -1,0 +1,20 @@
+.sidebar-navigation
+  .nav
+    each link, menu_name in theme.menu
+      li
+        if is_current(link)
+          a.current(href=url_for(link))= __(menu_name)
+        else
+          a(href=url_for(link))= __(menu_name)
+
+  .sidebar-tools
+    .nav_right_btn
+      if theme.rightbtn.back && is_post()
+        li.btn-go-back
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)", title="Back")
+      if theme.rightbtn.search
+        li.btn-search
+          a.fa.fa-search(onclick="Anatolo.search.openWindow();", title="Search")
+      if theme.rightbtn.darkLightToggle
+        li.btn-toggle-theme
+          a.far.fa-sun(onclick="Anatolo.darkLightToggle();", title="Toggle theme")
