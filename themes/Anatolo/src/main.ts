@@ -1,3 +1,4 @@
+import './scss/archive-theme.scss';
 import './scss/color-defination.scss';
 import './scss/blog_basic.scss';
 import './scss/highlight.scss';

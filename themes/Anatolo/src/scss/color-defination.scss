@@ -17,37 +17,51 @@
 }
 
 @mixin darkTheme() {
-  $primary: 229 234 242;
-  $secondary: 10 13 18;
-  $tertiary: 88 166 255;
+  $primary: 232 225 210;
+  $secondary: 24 22 19;
+  $tertiary: 193 122 93;
   @include genColor('primary', $primary, $secondary);
   @include genColor('secondary', $secondary, $primary);
   @include genColor('tertiary', $tertiary, $secondary);
-  --surface: #0f141b;
-  --surface-soft: #151b24;
-  --border-subtle: rgba(148, 163, 184, 0.16);
-  --text-strong: #f4f7fb;
-  --text-main: #c7d0dc;
-  --text-muted: #8f9bac;
-  --accent: #58a6ff;
-  --accent-soft: rgba(88, 166, 255, 0.14);
+  --surface: #1d1a17;
+  --surface-soft: #29251f;
+  --border-subtle: #514a40;
+  --border-strong: #e8e1d2;
+  --text-strong: #f1eadb;
+  --text-main: #d2c9b8;
+  --text-muted: #9b9283;
+  --accent: #c17a5d;
+  --accent-soft: rgba(193, 122, 93, 0.16);
+  --accent-contrast: #181512;
+  --verdigris: #78998d;
+  --paper: #181613;
+  --paper-deep: #211e1a;
+  --label: #aaa08f;
+  --logo-filter: grayscale(1) sepia(0.35) brightness(1.35) contrast(0.9);
 }
 
 @mixin lightTheme() {
-  $primary: 22 22 22;
-  $secondary: 255 255 255;
-  $tertiary: 71 134 214;
+  $primary: 31 29 25;
+  $secondary: 245 242 234;
+  $tertiary: 149 89 65;
   @include genColor('primary', $primary, $secondary);
   @include genColor('secondary', $secondary, $primary);
   @include genColor('tertiary', $tertiary, $secondary);
-  --surface: #ffffff;
-  --surface-soft: #f6f8fb;
-  --border-subtle: rgba(15, 23, 42, 0.12);
-  --text-strong: #111827;
-  --text-main: #334155;
-  --text-muted: #64748b;
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.1);
+  --surface: #f8f5ed;
+  --surface-soft: #ebe5d9;
+  --border-subtle: #c9c0b0;
+  --border-strong: #2b2924;
+  --text-strong: #1f1d19;
+  --text-main: #37332d;
+  --text-muted: #756e63;
+  --accent: #955941;
+  --accent-soft: rgba(149, 89, 65, 0.12);
+  --accent-contrast: #f7f3e9;
+  --verdigris: #55766b;
+  --paper: #f5f2ea;
+  --paper-deep: #eee8dc;
+  --label: #6c655b;
+  --logo-filter: grayscale(1) sepia(0.3) contrast(1.05);
 }
 
 html[theme='default'] {

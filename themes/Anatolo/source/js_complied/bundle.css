@@ -1,660 +1,388 @@
 html[theme=default] {
-  --primary-rgb: 22, 22, 22;
-  --primary: rgb(22, 22, 22);
-  --primary-50: rgb(243.35, 243.35, 243.35);
-  --primary-100: rgb(231.7, 231.7, 231.7);
-  --primary-150: rgb(220.05, 220.05, 220.05);
-  --primary-200: rgb(208.4, 208.4, 208.4);
-  --primary-250: rgb(196.75, 196.75, 196.75);
-  --primary-300: rgb(185.1, 185.1, 185.1);
-  --primary-350: rgb(173.45, 173.45, 173.45);
-  --primary-400: rgb(161.8, 161.8, 161.8);
-  --primary-450: rgb(150.15, 150.15, 150.15);
-  --primary-500: rgb(138.5, 138.5, 138.5);
-  --primary-550: rgb(126.85, 126.85, 126.85);
-  --primary-600: rgb(115.2, 115.2, 115.2);
-  --primary-650: rgb(103.55, 103.55, 103.55);
-  --primary-700: rgb(91.9, 91.9, 91.9);
-  --primary-750: rgb(80.25, 80.25, 80.25);
-  --primary-800: rgb(68.6, 68.6, 68.6);
-  --primary-850: rgb(56.95, 56.95, 56.95);
-  --primary-900: rgb(45.3, 45.3, 45.3);
-  --primary-950: rgb(33.65, 33.65, 33.65);
-  --primary-high: rgb(45.3, 45.3, 45.3);
-  --primary-midium: rgb(91.9, 91.9, 91.9);
-  --primary-low-mid: rgb(138.5, 138.5, 138.5);
-  --primary-low: rgb(208.4, 208.4, 208.4);
-  --primary-very-low: rgb(254.8835, 254.8835, 254.8835);
-  --secondary-rgb: 255, 255, 255;
-  --secondary: rgb(255, 255, 255);
-  --secondary-50: rgb(33.65, 33.65, 33.65);
-  --secondary-100: rgb(45.3, 45.3, 45.3);
-  --secondary-150: rgb(56.95, 56.95, 56.95);
-  --secondary-200: rgb(68.6, 68.6, 68.6);
-  --secondary-250: rgb(80.25, 80.25, 80.25);
-  --secondary-300: rgb(91.9, 91.9, 91.9);
-  --secondary-350: rgb(103.55, 103.55, 103.55);
-  --secondary-400: rgb(115.2, 115.2, 115.2);
-  --secondary-450: rgb(126.85, 126.85, 126.85);
-  --secondary-500: rgb(138.5, 138.5, 138.5);
-  --secondary-550: rgb(150.15, 150.15, 150.15);
-  --secondary-600: rgb(161.8, 161.8, 161.8);
-  --secondary-650: rgb(173.45, 173.45, 173.45);
-  --secondary-700: rgb(185.1, 185.1, 185.1);
-  --secondary-750: rgb(196.75, 196.75, 196.75);
-  --secondary-800: rgb(208.4, 208.4, 208.4);
-  --secondary-850: rgb(220.05, 220.05, 220.05);
-  --secondary-900: rgb(231.7, 231.7, 231.7);
-  --secondary-950: rgb(243.35, 243.35, 243.35);
-  --secondary-high: rgb(231.7, 231.7, 231.7);
-  --secondary-midium: rgb(185.1, 185.1, 185.1);
-  --secondary-low-mid: rgb(138.5, 138.5, 138.5);
-  --secondary-low: rgb(68.6, 68.6, 68.6);
-  --secondary-very-low: rgb(22.1165, 22.1165, 22.1165);
-  --tertiary-rgb: 71, 134, 214;
-  --tertiary: rgb(71, 134, 214);
-  --tertiary-50: rgb(245.8, 248.95, 252.95);
-  --tertiary-100: rgb(236.6, 242.9, 250.9);
-  --tertiary-150: rgb(227.4, 236.85, 248.85);
-  --tertiary-200: rgb(218.2, 230.8, 246.8);
-  --tertiary-250: rgb(209, 224.75, 244.75);
-  --tertiary-300: rgb(199.8, 218.7, 242.7);
-  --tertiary-350: rgb(190.6, 212.65, 240.65);
-  --tertiary-400: rgb(181.4, 206.6, 238.6);
-  --tertiary-450: rgb(172.2, 200.55, 236.55);
-  --tertiary-500: rgb(163, 194.5, 234.5);
-  --tertiary-550: rgb(153.8, 188.45, 232.45);
-  --tertiary-600: rgb(144.6, 182.4, 230.4);
-  --tertiary-650: rgb(135.4, 176.35, 228.35);
-  --tertiary-700: rgb(126.2, 170.3, 226.3);
-  --tertiary-750: rgb(117, 164.25, 224.25);
-  --tertiary-800: rgb(107.8, 158.2, 222.2);
-  --tertiary-850: rgb(98.6, 152.15, 220.15);
-  --tertiary-900: rgb(89.4, 146.1, 218.1);
-  --tertiary-950: rgb(80.2, 140.05, 216.05);
-  --tertiary-high: rgb(89.4, 146.1, 218.1);
-  --tertiary-midium: rgb(126.2, 170.3, 226.3);
-  --tertiary-low-mid: rgb(163, 194.5, 234.5);
-  --tertiary-low: rgb(218.2, 230.8, 246.8);
-  --tertiary-very-low: rgb(254.908, 254.9395, 254.9795);
-  --surface: #ffffff;
-  --surface-soft: #f6f8fb;
-  --border-subtle: rgba(15, 23, 42, 0.12);
-  --text-strong: #111827;
-  --text-main: #334155;
-  --text-muted: #64748b;
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.1);
+  --primary-rgb: 31, 29, 25;
+  --primary: rgb(31, 29, 25);
+  --primary-50: rgb(234.3, 231.35, 223.55);
+  --primary-100: rgb(223.6, 220.7, 213.1);
+  --primary-150: rgb(212.9, 210.05, 202.65);
+  --primary-200: rgb(202.2, 199.4, 192.2);
+  --primary-250: rgb(191.5, 188.75, 181.75);
+  --primary-300: rgb(180.8, 178.1, 171.3);
+  --primary-350: rgb(170.1, 167.45, 160.85);
+  --primary-400: rgb(159.4, 156.8, 150.4);
+  --primary-450: rgb(148.7, 146.15, 139.95);
+  --primary-500: rgb(138, 135.5, 129.5);
+  --primary-550: rgb(127.3, 124.85, 119.05);
+  --primary-600: rgb(116.6, 114.2, 108.6);
+  --primary-650: rgb(105.9, 103.55, 98.15);
+  --primary-700: rgb(95.2, 92.9, 87.7);
+  --primary-750: rgb(84.5, 82.25, 77.25);
+  --primary-800: rgb(73.8, 71.6, 66.8);
+  --primary-850: rgb(63.1, 60.95, 56.35);
+  --primary-900: rgb(52.4, 50.3, 45.9);
+  --primary-950: rgb(41.7, 39.65, 35.45);
+  --primary-high: rgb(52.4, 50.3, 45.9);
+  --primary-midium: rgb(95.2, 92.9, 87.7);
+  --primary-low-mid: rgb(138, 135.5, 129.5);
+  --primary-low: rgb(202.2, 199.4, 192.2);
+  --primary-very-low: rgb(244.893, 241.8935, 233.8955);
+  --secondary-rgb: 245, 242, 234;
+  --secondary: rgb(245, 242, 234);
+  --secondary-50: rgb(41.7, 39.65, 35.45);
+  --secondary-100: rgb(52.4, 50.3, 45.9);
+  --secondary-150: rgb(63.1, 60.95, 56.35);
+  --secondary-200: rgb(73.8, 71.6, 66.8);
+  --secondary-250: rgb(84.5, 82.25, 77.25);
+  --secondary-300: rgb(95.2, 92.9, 87.7);
+  --secondary-350: rgb(105.9, 103.55, 98.15);
+  --secondary-400: rgb(116.6, 114.2, 108.6);
+  --secondary-450: rgb(127.3, 124.85, 119.05);
+  --secondary-500: rgb(138, 135.5, 129.5);
+  --secondary-550: rgb(148.7, 146.15, 139.95);
+  --secondary-600: rgb(159.4, 156.8, 150.4);
+  --secondary-650: rgb(170.1, 167.45, 160.85);
+  --secondary-700: rgb(180.8, 178.1, 171.3);
+  --secondary-750: rgb(191.5, 188.75, 181.75);
+  --secondary-800: rgb(202.2, 199.4, 192.2);
+  --secondary-850: rgb(212.9, 210.05, 202.65);
+  --secondary-900: rgb(223.6, 220.7, 213.1);
+  --secondary-950: rgb(234.3, 231.35, 223.55);
+  --secondary-high: rgb(223.6, 220.7, 213.1);
+  --secondary-midium: rgb(180.8, 178.1, 171.3);
+  --secondary-low-mid: rgb(138, 135.5, 129.5);
+  --secondary-low: rgb(73.8, 71.6, 66.8);
+  --secondary-very-low: rgb(31.107, 29.1065, 25.1045);
+  --tertiary-rgb: 149, 89, 65;
+  --tertiary: rgb(149, 89, 65);
+  --tertiary-50: rgb(240.2, 234.35, 225.55);
+  --tertiary-100: rgb(235.4, 226.7, 217.1);
+  --tertiary-150: rgb(230.6, 219.05, 208.65);
+  --tertiary-200: rgb(225.8, 211.4, 200.2);
+  --tertiary-250: rgb(221, 203.75, 191.75);
+  --tertiary-300: rgb(216.2, 196.1, 183.3);
+  --tertiary-350: rgb(211.4, 188.45, 174.85);
+  --tertiary-400: rgb(206.6, 180.8, 166.4);
+  --tertiary-450: rgb(201.8, 173.15, 157.95);
+  --tertiary-500: rgb(197, 165.5, 149.5);
+  --tertiary-550: rgb(192.2, 157.85, 141.05);
+  --tertiary-600: rgb(187.4, 150.2, 132.6);
+  --tertiary-650: rgb(182.6, 142.55, 124.15);
+  --tertiary-700: rgb(177.8, 134.9, 115.7);
+  --tertiary-750: rgb(173, 127.25, 107.25);
+  --tertiary-800: rgb(168.2, 119.6, 98.8);
+  --tertiary-850: rgb(163.4, 111.95, 90.35);
+  --tertiary-900: rgb(158.6, 104.3, 81.9);
+  --tertiary-950: rgb(153.8, 96.65, 73.45);
+  --tertiary-high: rgb(158.6, 104.3, 81.9);
+  --tertiary-midium: rgb(177.8, 134.9, 115.7);
+  --tertiary-low-mid: rgb(197, 165.5, 149.5);
+  --tertiary-low: rgb(225.8, 211.4, 200.2);
+  --tertiary-very-low: rgb(244.952, 241.9235, 233.9155);
+  --surface: #f8f5ed;
+  --surface-soft: #ebe5d9;
+  --border-subtle: #c9c0b0;
+  --border-strong: #2b2924;
+  --text-strong: #1f1d19;
+  --text-main: #37332d;
+  --text-muted: #756e63;
+  --accent: #955941;
+  --accent-soft: rgba(149, 89, 65, 0.12);
+  --accent-contrast: #f7f3e9;
+  --verdigris: #55766b;
+  --paper: #f5f2ea;
+  --paper-deep: #eee8dc;
+  --label: #6c655b;
+  --logo-filter: grayscale(1) sepia(0.3) contrast(1.05);
 }
 
 @media (prefers-color-scheme: dark) {
   html[theme=default] {
-    --primary-rgb: 229, 234, 242;
-    --primary: rgb(229, 234, 242);
-    --primary-50: rgb(20.95, 24.05, 29.2);
-    --primary-100: rgb(31.9, 35.1, 40.4);
-    --primary-150: rgb(42.85, 46.15, 51.6);
-    --primary-200: rgb(53.8, 57.2, 62.8);
-    --primary-250: rgb(64.75, 68.25, 74);
-    --primary-300: rgb(75.7, 79.3, 85.2);
-    --primary-350: rgb(86.65, 90.35, 96.4);
-    --primary-400: rgb(97.6, 101.4, 107.6);
-    --primary-450: rgb(108.55, 112.45, 118.8);
-    --primary-500: rgb(119.5, 123.5, 130);
-    --primary-550: rgb(130.45, 134.55, 141.2);
-    --primary-600: rgb(141.4, 145.6, 152.4);
-    --primary-650: rgb(152.35, 156.65, 163.6);
-    --primary-700: rgb(163.3, 167.7, 174.8);
-    --primary-750: rgb(174.25, 178.75, 186);
-    --primary-800: rgb(185.2, 189.8, 197.2);
-    --primary-850: rgb(196.15, 200.85, 208.4);
-    --primary-900: rgb(207.1, 211.9, 219.6);
-    --primary-950: rgb(218.05, 222.95, 230.8);
-    --primary-high: rgb(207.1, 211.9, 219.6);
-    --primary-midium: rgb(163.3, 167.7, 174.8);
-    --primary-low-mid: rgb(119.5, 123.5, 130);
-    --primary-low: rgb(53.8, 57.2, 62.8);
-    --primary-very-low: rgb(10.1095, 13.1105, 18.112);
-    --secondary-rgb: 10, 13, 18;
-    --secondary: rgb(10, 13, 18);
-    --secondary-50: rgb(218.05, 222.95, 230.8);
-    --secondary-100: rgb(207.1, 211.9, 219.6);
-    --secondary-150: rgb(196.15, 200.85, 208.4);
-    --secondary-200: rgb(185.2, 189.8, 197.2);
-    --secondary-250: rgb(174.25, 178.75, 186);
-    --secondary-300: rgb(163.3, 167.7, 174.8);
-    --secondary-350: rgb(152.35, 156.65, 163.6);
-    --secondary-400: rgb(141.4, 145.6, 152.4);
-    --secondary-450: rgb(130.45, 134.55, 141.2);
-    --secondary-500: rgb(119.5, 123.5, 130);
-    --secondary-550: rgb(108.55, 112.45, 118.8);
-    --secondary-600: rgb(97.6, 101.4, 107.6);
-    --secondary-650: rgb(86.65, 90.35, 96.4);
-    --secondary-700: rgb(75.7, 79.3, 85.2);
-    --secondary-750: rgb(64.75, 68.25, 74);
-    --secondary-800: rgb(53.8, 57.2, 62.8);
-    --secondary-850: rgb(42.85, 46.15, 51.6);
-    --secondary-900: rgb(31.9, 35.1, 40.4);
-    --secondary-950: rgb(20.95, 24.05, 29.2);
-    --secondary-high: rgb(31.9, 35.1, 40.4);
-    --secondary-midium: rgb(75.7, 79.3, 85.2);
-    --secondary-low-mid: rgb(119.5, 123.5, 130);
-    --secondary-low: rgb(185.2, 189.8, 197.2);
-    --secondary-very-low: rgb(228.8905, 233.8895, 241.888);
-    --tertiary-rgb: 88, 166, 255;
-    --tertiary: rgb(88, 166, 255);
-    --tertiary-50: rgb(13.9, 20.65, 29.85);
-    --tertiary-100: rgb(17.8, 28.3, 41.7);
-    --tertiary-150: rgb(21.7, 35.95, 53.55);
-    --tertiary-200: rgb(25.6, 43.6, 65.4);
-    --tertiary-250: rgb(29.5, 51.25, 77.25);
-    --tertiary-300: rgb(33.4, 58.9, 89.1);
-    --tertiary-350: rgb(37.3, 66.55, 100.95);
-    --tertiary-400: rgb(41.2, 74.2, 112.8);
-    --tertiary-450: rgb(45.1, 81.85, 124.65);
-    --tertiary-500: rgb(49, 89.5, 136.5);
-    --tertiary-550: rgb(52.9, 97.15, 148.35);
-    --tertiary-600: rgb(56.8, 104.8, 160.2);
-    --tertiary-650: rgb(60.7, 112.45, 172.05);
-    --tertiary-700: rgb(64.6, 120.1, 183.9);
-    --tertiary-750: rgb(68.5, 127.75, 195.75);
-    --tertiary-800: rgb(72.4, 135.4, 207.6);
-    --tertiary-850: rgb(76.3, 143.05, 219.45);
-    --tertiary-900: rgb(80.2, 150.7, 231.3);
-    --tertiary-950: rgb(84.1, 158.35, 243.15);
-    --tertiary-high: rgb(80.2, 150.7, 231.3);
-    --tertiary-midium: rgb(64.6, 120.1, 183.9);
-    --tertiary-low-mid: rgb(49, 89.5, 136.5);
-    --tertiary-low: rgb(25.6, 43.6, 65.4);
-    --tertiary-very-low: rgb(10.039, 13.0765, 18.1185);
-    --surface: #0f141b;
-    --surface-soft: #151b24;
-    --border-subtle: rgba(148, 163, 184, 0.16);
-    --text-strong: #f4f7fb;
-    --text-main: #c7d0dc;
-    --text-muted: #8f9bac;
-    --accent: #58a6ff;
-    --accent-soft: rgba(88, 166, 255, 0.14);
+    --primary-rgb: 232, 225, 210;
+    --primary: rgb(232, 225, 210);
+    --primary-50: rgb(34.4, 32.15, 28.55);
+    --primary-100: rgb(44.8, 42.3, 38.1);
+    --primary-150: rgb(55.2, 52.45, 47.65);
+    --primary-200: rgb(65.6, 62.6, 57.2);
+    --primary-250: rgb(76, 72.75, 66.75);
+    --primary-300: rgb(86.4, 82.9, 76.3);
+    --primary-350: rgb(96.8, 93.05, 85.85);
+    --primary-400: rgb(107.2, 103.2, 95.4);
+    --primary-450: rgb(117.6, 113.35, 104.95);
+    --primary-500: rgb(128, 123.5, 114.5);
+    --primary-550: rgb(138.4, 133.65, 124.05);
+    --primary-600: rgb(148.8, 143.8, 133.6);
+    --primary-650: rgb(159.2, 153.95, 143.15);
+    --primary-700: rgb(169.6, 164.1, 152.7);
+    --primary-750: rgb(180, 174.25, 162.25);
+    --primary-800: rgb(190.4, 184.4, 171.8);
+    --primary-850: rgb(200.8, 194.55, 181.35);
+    --primary-900: rgb(211.2, 204.7, 190.9);
+    --primary-950: rgb(221.6, 214.85, 200.45);
+    --primary-high: rgb(211.2, 204.7, 190.9);
+    --primary-midium: rgb(169.6, 164.1, 152.7);
+    --primary-low-mid: rgb(128, 123.5, 114.5);
+    --primary-low: rgb(65.6, 62.6, 57.2);
+    --primary-very-low: rgb(24.104, 22.1015, 19.0955);
+    --secondary-rgb: 24, 22, 19;
+    --secondary: rgb(24, 22, 19);
+    --secondary-50: rgb(221.6, 214.85, 200.45);
+    --secondary-100: rgb(211.2, 204.7, 190.9);
+    --secondary-150: rgb(200.8, 194.55, 181.35);
+    --secondary-200: rgb(190.4, 184.4, 171.8);
+    --secondary-250: rgb(180, 174.25, 162.25);
+    --secondary-300: rgb(169.6, 164.1, 152.7);
+    --secondary-350: rgb(159.2, 153.95, 143.15);
+    --secondary-400: rgb(148.8, 143.8, 133.6);
+    --secondary-450: rgb(138.4, 133.65, 124.05);
+    --secondary-500: rgb(128, 123.5, 114.5);
+    --secondary-550: rgb(117.6, 113.35, 104.95);
+    --secondary-600: rgb(107.2, 103.2, 95.4);
+    --secondary-650: rgb(96.8, 93.05, 85.85);
+    --secondary-700: rgb(86.4, 82.9, 76.3);
+    --secondary-750: rgb(76, 72.75, 66.75);
+    --secondary-800: rgb(65.6, 62.6, 57.2);
+    --secondary-850: rgb(55.2, 52.45, 47.65);
+    --secondary-900: rgb(44.8, 42.3, 38.1);
+    --secondary-950: rgb(34.4, 32.15, 28.55);
+    --secondary-high: rgb(44.8, 42.3, 38.1);
+    --secondary-midium: rgb(86.4, 82.9, 76.3);
+    --secondary-low-mid: rgb(128, 123.5, 114.5);
+    --secondary-low: rgb(190.4, 184.4, 171.8);
+    --secondary-very-low: rgb(231.896, 224.8985, 209.9045);
+    --tertiary-rgb: 193, 122, 93;
+    --tertiary: rgb(193, 122, 93);
+    --tertiary-50: rgb(32.45, 27, 22.7);
+    --tertiary-100: rgb(40.9, 32, 26.4);
+    --tertiary-150: rgb(49.35, 37, 30.1);
+    --tertiary-200: rgb(57.8, 42, 33.8);
+    --tertiary-250: rgb(66.25, 47, 37.5);
+    --tertiary-300: rgb(74.7, 52, 41.2);
+    --tertiary-350: rgb(83.15, 57, 44.9);
+    --tertiary-400: rgb(91.6, 62, 48.6);
+    --tertiary-450: rgb(100.05, 67, 52.3);
+    --tertiary-500: rgb(108.5, 72, 56);
+    --tertiary-550: rgb(116.95, 77, 59.7);
+    --tertiary-600: rgb(125.4, 82, 63.4);
+    --tertiary-650: rgb(133.85, 87, 67.1);
+    --tertiary-700: rgb(142.3, 92, 70.8);
+    --tertiary-750: rgb(150.75, 97, 74.5);
+    --tertiary-800: rgb(159.2, 102, 78.2);
+    --tertiary-850: rgb(167.65, 107, 81.9);
+    --tertiary-900: rgb(176.1, 112, 85.6);
+    --tertiary-950: rgb(184.55, 117, 89.3);
+    --tertiary-high: rgb(176.1, 112, 85.6);
+    --tertiary-midium: rgb(142.3, 92, 70.8);
+    --tertiary-low-mid: rgb(108.5, 72, 56);
+    --tertiary-low: rgb(57.8, 42, 33.8);
+    --tertiary-very-low: rgb(24.0845, 22.05, 19.037);
+    --surface: #1d1a17;
+    --surface-soft: #29251f;
+    --border-subtle: #514a40;
+    --border-strong: #e8e1d2;
+    --text-strong: #f1eadb;
+    --text-main: #d2c9b8;
+    --text-muted: #9b9283;
+    --accent: #c17a5d;
+    --accent-soft: rgba(193, 122, 93, 0.16);
+    --accent-contrast: #181512;
+    --verdigris: #78998d;
+    --paper: #181613;
+    --paper-deep: #211e1a;
+    --label: #aaa08f;
+    --logo-filter: grayscale(1) sepia(0.35) brightness(1.35) contrast(0.9);
   }
 }
 html[theme=dark] {
-  --primary-rgb: 229, 234, 242;
-  --primary: rgb(229, 234, 242);
-  --primary-50: rgb(20.95, 24.05, 29.2);
-  --primary-100: rgb(31.9, 35.1, 40.4);
-  --primary-150: rgb(42.85, 46.15, 51.6);
-  --primary-200: rgb(53.8, 57.2, 62.8);
-  --primary-250: rgb(64.75, 68.25, 74);
-  --primary-300: rgb(75.7, 79.3, 85.2);
-  --primary-350: rgb(86.65, 90.35, 96.4);
-  --primary-400: rgb(97.6, 101.4, 107.6);
-  --primary-450: rgb(108.55, 112.45, 118.8);
-  --primary-500: rgb(119.5, 123.5, 130);
-  --primary-550: rgb(130.45, 134.55, 141.2);
-  --primary-600: rgb(141.4, 145.6, 152.4);
-  --primary-650: rgb(152.35, 156.65, 163.6);
-  --primary-700: rgb(163.3, 167.7, 174.8);
-  --primary-750: rgb(174.25, 178.75, 186);
-  --primary-800: rgb(185.2, 189.8, 197.2);
-  --primary-850: rgb(196.15, 200.85, 208.4);
-  --primary-900: rgb(207.1, 211.9, 219.6);
-  --primary-950: rgb(218.05, 222.95, 230.8);
-  --primary-high: rgb(207.1, 211.9, 219.6);
-  --primary-midium: rgb(163.3, 167.7, 174.8);
-  --primary-low-mid: rgb(119.5, 123.5, 130);
-  --primary-low: rgb(53.8, 57.2, 62.8);
-  --primary-very-low: rgb(10.1095, 13.1105, 18.112);
-  --secondary-rgb: 10, 13, 18;
-  --secondary: rgb(10, 13, 18);
-  --secondary-50: rgb(218.05, 222.95, 230.8);
-  --secondary-100: rgb(207.1, 211.9, 219.6);
-  --secondary-150: rgb(196.15, 200.85, 208.4);
-  --secondary-200: rgb(185.2, 189.8, 197.2);
-  --secondary-250: rgb(174.25, 178.75, 186);
-  --secondary-300: rgb(163.3, 167.7, 174.8);
-  --secondary-350: rgb(152.35, 156.65, 163.6);
-  --secondary-400: rgb(141.4, 145.6, 152.4);
-  --secondary-450: rgb(130.45, 134.55, 141.2);
-  --secondary-500: rgb(119.5, 123.5, 130);
-  --secondary-550: rgb(108.55, 112.45, 118.8);
-  --secondary-600: rgb(97.6, 101.4, 107.6);
-  --secondary-650: rgb(86.65, 90.35, 96.4);
-  --secondary-700: rgb(75.7, 79.3, 85.2);
-  --secondary-750: rgb(64.75, 68.25, 74);
-  --secondary-800: rgb(53.8, 57.2, 62.8);
-  --secondary-850: rgb(42.85, 46.15, 51.6);
-  --secondary-900: rgb(31.9, 35.1, 40.4);
-  --secondary-950: rgb(20.95, 24.05, 29.2);
-  --secondary-high: rgb(31.9, 35.1, 40.4);
-  --secondary-midium: rgb(75.7, 79.3, 85.2);
-  --secondary-low-mid: rgb(119.5, 123.5, 130);
-  --secondary-low: rgb(185.2, 189.8, 197.2);
-  --secondary-very-low: rgb(228.8905, 233.8895, 241.888);
-  --tertiary-rgb: 88, 166, 255;
-  --tertiary: rgb(88, 166, 255);
-  --tertiary-50: rgb(13.9, 20.65, 29.85);
-  --tertiary-100: rgb(17.8, 28.3, 41.7);
-  --tertiary-150: rgb(21.7, 35.95, 53.55);
-  --tertiary-200: rgb(25.6, 43.6, 65.4);
-  --tertiary-250: rgb(29.5, 51.25, 77.25);
-  --tertiary-300: rgb(33.4, 58.9, 89.1);
-  --tertiary-350: rgb(37.3, 66.55, 100.95);
-  --tertiary-400: rgb(41.2, 74.2, 112.8);
-  --tertiary-450: rgb(45.1, 81.85, 124.65);
-  --tertiary-500: rgb(49, 89.5, 136.5);
-  --tertiary-550: rgb(52.9, 97.15, 148.35);
-  --tertiary-600: rgb(56.8, 104.8, 160.2);
-  --tertiary-650: rgb(60.7, 112.45, 172.05);
-  --tertiary-700: rgb(64.6, 120.1, 183.9);
-  --tertiary-750: rgb(68.5, 127.75, 195.75);
-  --tertiary-800: rgb(72.4, 135.4, 207.6);
-  --tertiary-850: rgb(76.3, 143.05, 219.45);
-  --tertiary-900: rgb(80.2, 150.7, 231.3);
-  --tertiary-950: rgb(84.1, 158.35, 243.15);
-  --tertiary-high: rgb(80.2, 150.7, 231.3);
-  --tertiary-midium: rgb(64.6, 120.1, 183.9);
-  --tertiary-low-mid: rgb(49, 89.5, 136.5);
-  --tertiary-low: rgb(25.6, 43.6, 65.4);
-  --tertiary-very-low: rgb(10.039, 13.0765, 18.1185);
-  --surface: #0f141b;
-  --surface-soft: #151b24;
-  --border-subtle: rgba(148, 163, 184, 0.16);
-  --text-strong: #f4f7fb;
-  --text-main: #c7d0dc;
-  --text-muted: #8f9bac;
-  --accent: #58a6ff;
-  --accent-soft: rgba(88, 166, 255, 0.14);
+  --primary-rgb: 232, 225, 210;
+  --primary: rgb(232, 225, 210);
+  --primary-50: rgb(34.4, 32.15, 28.55);
+  --primary-100: rgb(44.8, 42.3, 38.1);
+  --primary-150: rgb(55.2, 52.45, 47.65);
+  --primary-200: rgb(65.6, 62.6, 57.2);
+  --primary-250: rgb(76, 72.75, 66.75);
+  --primary-300: rgb(86.4, 82.9, 76.3);
+  --primary-350: rgb(96.8, 93.05, 85.85);
+  --primary-400: rgb(107.2, 103.2, 95.4);
+  --primary-450: rgb(117.6, 113.35, 104.95);
+  --primary-500: rgb(128, 123.5, 114.5);
+  --primary-550: rgb(138.4, 133.65, 124.05);
+  --primary-600: rgb(148.8, 143.8, 133.6);
+  --primary-650: rgb(159.2, 153.95, 143.15);
+  --primary-700: rgb(169.6, 164.1, 152.7);
+  --primary-750: rgb(180, 174.25, 162.25);
+  --primary-800: rgb(190.4, 184.4, 171.8);
+  --primary-850: rgb(200.8, 194.55, 181.35);
+  --primary-900: rgb(211.2, 204.7, 190.9);
+  --primary-950: rgb(221.6, 214.85, 200.45);
+  --primary-high: rgb(211.2, 204.7, 190.9);
+  --primary-midium: rgb(169.6, 164.1, 152.7);
+  --primary-low-mid: rgb(128, 123.5, 114.5);
+  --primary-low: rgb(65.6, 62.6, 57.2);
+  --primary-very-low: rgb(24.104, 22.1015, 19.0955);
+  --secondary-rgb: 24, 22, 19;
+  --secondary: rgb(24, 22, 19);
+  --secondary-50: rgb(221.6, 214.85, 200.45);
+  --secondary-100: rgb(211.2, 204.7, 190.9);
+  --secondary-150: rgb(200.8, 194.55, 181.35);
+  --secondary-200: rgb(190.4, 184.4, 171.8);
+  --secondary-250: rgb(180, 174.25, 162.25);
+  --secondary-300: rgb(169.6, 164.1, 152.7);
+  --secondary-350: rgb(159.2, 153.95, 143.15);
+  --secondary-400: rgb(148.8, 143.8, 133.6);
+  --secondary-450: rgb(138.4, 133.65, 124.05);
+  --secondary-500: rgb(128, 123.5, 114.5);
+  --secondary-550: rgb(117.6, 113.35, 104.95);
+  --secondary-600: rgb(107.2, 103.2, 95.4);
+  --secondary-650: rgb(96.8, 93.05, 85.85);
+  --secondary-700: rgb(86.4, 82.9, 76.3);
+  --secondary-750: rgb(76, 72.75, 66.75);
+  --secondary-800: rgb(65.6, 62.6, 57.2);
+  --secondary-850: rgb(55.2, 52.45, 47.65);
+  --secondary-900: rgb(44.8, 42.3, 38.1);
+  --secondary-950: rgb(34.4, 32.15, 28.55);
+  --secondary-high: rgb(44.8, 42.3, 38.1);
+  --secondary-midium: rgb(86.4, 82.9, 76.3);
+  --secondary-low-mid: rgb(128, 123.5, 114.5);
+  --secondary-low: rgb(190.4, 184.4, 171.8);
+  --secondary-very-low: rgb(231.896, 224.8985, 209.9045);
+  --tertiary-rgb: 193, 122, 93;
+  --tertiary: rgb(193, 122, 93);
+  --tertiary-50: rgb(32.45, 27, 22.7);
+  --tertiary-100: rgb(40.9, 32, 26.4);
+  --tertiary-150: rgb(49.35, 37, 30.1);
+  --tertiary-200: rgb(57.8, 42, 33.8);
+  --tertiary-250: rgb(66.25, 47, 37.5);
+  --tertiary-300: rgb(74.7, 52, 41.2);
+  --tertiary-350: rgb(83.15, 57, 44.9);
+  --tertiary-400: rgb(91.6, 62, 48.6);
+  --tertiary-450: rgb(100.05, 67, 52.3);
+  --tertiary-500: rgb(108.5, 72, 56);
+  --tertiary-550: rgb(116.95, 77, 59.7);
+  --tertiary-600: rgb(125.4, 82, 63.4);
+  --tertiary-650: rgb(133.85, 87, 67.1);
+  --tertiary-700: rgb(142.3, 92, 70.8);
+  --tertiary-750: rgb(150.75, 97, 74.5);
+  --tertiary-800: rgb(159.2, 102, 78.2);
+  --tertiary-850: rgb(167.65, 107, 81.9);
+  --tertiary-900: rgb(176.1, 112, 85.6);
+  --tertiary-950: rgb(184.55, 117, 89.3);
+  --tertiary-high: rgb(176.1, 112, 85.6);
+  --tertiary-midium: rgb(142.3, 92, 70.8);
+  --tertiary-low-mid: rgb(108.5, 72, 56);
+  --tertiary-low: rgb(57.8, 42, 33.8);
+  --tertiary-very-low: rgb(24.0845, 22.05, 19.037);
+  --surface: #1d1a17;
+  --surface-soft: #29251f;
+  --border-subtle: #514a40;
+  --border-strong: #e8e1d2;
+  --text-strong: #f1eadb;
+  --text-main: #d2c9b8;
+  --text-muted: #9b9283;
+  --accent: #c17a5d;
+  --accent-soft: rgba(193, 122, 93, 0.16);
+  --accent-contrast: #181512;
+  --verdigris: #78998d;
+  --paper: #181613;
+  --paper-deep: #211e1a;
+  --label: #aaa08f;
+  --logo-filter: grayscale(1) sepia(0.35) brightness(1.35) contrast(0.9);
 }
 
 html[theme=light] {
-  --primary-rgb: 22, 22, 22;
-  --primary: rgb(22, 22, 22);
-  --primary-50: rgb(243.35, 243.35, 243.35);
-  --primary-100: rgb(231.7, 231.7, 231.7);
-  --primary-150: rgb(220.05, 220.05, 220.05);
-  --primary-200: rgb(208.4, 208.4, 208.4);
-  --primary-250: rgb(196.75, 196.75, 196.75);
-  --primary-300: rgb(185.1, 185.1, 185.1);
-  --primary-350: rgb(173.45, 173.45, 173.45);
-  --primary-400: rgb(161.8, 161.8, 161.8);
-  --primary-450: rgb(150.15, 150.15, 150.15);
-  --primary-500: rgb(138.5, 138.5, 138.5);
-  --primary-550: rgb(126.85, 126.85, 126.85);
-  --primary-600: rgb(115.2, 115.2, 115.2);
-  --primary-650: rgb(103.55, 103.55, 103.55);
-  --primary-700: rgb(91.9, 91.9, 91.9);
-  --primary-750: rgb(80.25, 80.25, 80.25);
-  --primary-800: rgb(68.6, 68.6, 68.6);
-  --primary-850: rgb(56.95, 56.95, 56.95);
-  --primary-900: rgb(45.3, 45.3, 45.3);
-  --primary-950: rgb(33.65, 33.65, 33.65);
-  --primary-high: rgb(45.3, 45.3, 45.3);
-  --primary-midium: rgb(91.9, 91.9, 91.9);
-  --primary-low-mid: rgb(138.5, 138.5, 138.5);
-  --primary-low: rgb(208.4, 208.4, 208.4);
-  --primary-very-low: rgb(254.8835, 254.8835, 254.8835);
-  --secondary-rgb: 255, 255, 255;
-  --secondary: rgb(255, 255, 255);
-  --secondary-50: rgb(33.65, 33.65, 33.65);
-  --secondary-100: rgb(45.3, 45.3, 45.3);
-  --secondary-150: rgb(56.95, 56.95, 56.95);
-  --secondary-200: rgb(68.6, 68.6, 68.6);
-  --secondary-250: rgb(80.25, 80.25, 80.25);
-  --secondary-300: rgb(91.9, 91.9, 91.9);
-  --secondary-350: rgb(103.55, 103.55, 103.55);
-  --secondary-400: rgb(115.2, 115.2, 115.2);
-  --secondary-450: rgb(126.85, 126.85, 126.85);
-  --secondary-500: rgb(138.5, 138.5, 138.5);
-  --secondary-550: rgb(150.15, 150.15, 150.15);
-  --secondary-600: rgb(161.8, 161.8, 161.8);
-  --secondary-650: rgb(173.45, 173.45, 173.45);
-  --secondary-700: rgb(185.1, 185.1, 185.1);
-  --secondary-750: rgb(196.75, 196.75, 196.75);
-  --secondary-800: rgb(208.4, 208.4, 208.4);
-  --secondary-850: rgb(220.05, 220.05, 220.05);
-  --secondary-900: rgb(231.7, 231.7, 231.7);
-  --secondary-950: rgb(243.35, 243.35, 243.35);
-  --secondary-high: rgb(231.7, 231.7, 231.7);
-  --secondary-midium: rgb(185.1, 185.1, 185.1);
-  --secondary-low-mid: rgb(138.5, 138.5, 138.5);
-  --secondary-low: rgb(68.6, 68.6, 68.6);
-  --secondary-very-low: rgb(22.1165, 22.1165, 22.1165);
-  --tertiary-rgb: 71, 134, 214;
-  --tertiary: rgb(71, 134, 214);
-  --tertiary-50: rgb(245.8, 248.95, 252.95);
-  --tertiary-100: rgb(236.6, 242.9, 250.9);
-  --tertiary-150: rgb(227.4, 236.85, 248.85);
-  --tertiary-200: rgb(218.2, 230.8, 246.8);
-  --tertiary-250: rgb(209, 224.75, 244.75);
-  --tertiary-300: rgb(199.8, 218.7, 242.7);
-  --tertiary-350: rgb(190.6, 212.65, 240.65);
-  --tertiary-400: rgb(181.4, 206.6, 238.6);
-  --tertiary-450: rgb(172.2, 200.55, 236.55);
-  --tertiary-500: rgb(163, 194.5, 234.5);
-  --tertiary-550: rgb(153.8, 188.45, 232.45);
-  --tertiary-600: rgb(144.6, 182.4, 230.4);
-  --tertiary-650: rgb(135.4, 176.35, 228.35);
-  --tertiary-700: rgb(126.2, 170.3, 226.3);
-  --tertiary-750: rgb(117, 164.25, 224.25);
-  --tertiary-800: rgb(107.8, 158.2, 222.2);
-  --tertiary-850: rgb(98.6, 152.15, 220.15);
-  --tertiary-900: rgb(89.4, 146.1, 218.1);
-  --tertiary-950: rgb(80.2, 140.05, 216.05);
-  --tertiary-high: rgb(89.4, 146.1, 218.1);
-  --tertiary-midium: rgb(126.2, 170.3, 226.3);
-  --tertiary-low-mid: rgb(163, 194.5, 234.5);
-  --tertiary-low: rgb(218.2, 230.8, 246.8);
-  --tertiary-very-low: rgb(254.908, 254.9395, 254.9795);
-  --surface: #ffffff;
-  --surface-soft: #f6f8fb;
-  --border-subtle: rgba(15, 23, 42, 0.12);
-  --text-strong: #111827;
-  --text-main: #334155;
-  --text-muted: #64748b;
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.1);
-}@charset "UTF-8";
-:root {
-  --mono-font-face: 'mononoki', 'Consolas', 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', 'courier',
-    monospace;
+  --primary-rgb: 31, 29, 25;
+  --primary: rgb(31, 29, 25);
+  --primary-50: rgb(234.3, 231.35, 223.55);
+  --primary-100: rgb(223.6, 220.7, 213.1);
+  --primary-150: rgb(212.9, 210.05, 202.65);
+  --primary-200: rgb(202.2, 199.4, 192.2);
+  --primary-250: rgb(191.5, 188.75, 181.75);
+  --primary-300: rgb(180.8, 178.1, 171.3);
+  --primary-350: rgb(170.1, 167.45, 160.85);
+  --primary-400: rgb(159.4, 156.8, 150.4);
+  --primary-450: rgb(148.7, 146.15, 139.95);
+  --primary-500: rgb(138, 135.5, 129.5);
+  --primary-550: rgb(127.3, 124.85, 119.05);
+  --primary-600: rgb(116.6, 114.2, 108.6);
+  --primary-650: rgb(105.9, 103.55, 98.15);
+  --primary-700: rgb(95.2, 92.9, 87.7);
+  --primary-750: rgb(84.5, 82.25, 77.25);
+  --primary-800: rgb(73.8, 71.6, 66.8);
+  --primary-850: rgb(63.1, 60.95, 56.35);
+  --primary-900: rgb(52.4, 50.3, 45.9);
+  --primary-950: rgb(41.7, 39.65, 35.45);
+  --primary-high: rgb(52.4, 50.3, 45.9);
+  --primary-midium: rgb(95.2, 92.9, 87.7);
+  --primary-low-mid: rgb(138, 135.5, 129.5);
+  --primary-low: rgb(202.2, 199.4, 192.2);
+  --primary-very-low: rgb(244.893, 241.8935, 233.8955);
+  --secondary-rgb: 245, 242, 234;
+  --secondary: rgb(245, 242, 234);
+  --secondary-50: rgb(41.7, 39.65, 35.45);
+  --secondary-100: rgb(52.4, 50.3, 45.9);
+  --secondary-150: rgb(63.1, 60.95, 56.35);
+  --secondary-200: rgb(73.8, 71.6, 66.8);
+  --secondary-250: rgb(84.5, 82.25, 77.25);
+  --secondary-300: rgb(95.2, 92.9, 87.7);
+  --secondary-350: rgb(105.9, 103.55, 98.15);
+  --secondary-400: rgb(116.6, 114.2, 108.6);
+  --secondary-450: rgb(127.3, 124.85, 119.05);
+  --secondary-500: rgb(138, 135.5, 129.5);
+  --secondary-550: rgb(148.7, 146.15, 139.95);
+  --secondary-600: rgb(159.4, 156.8, 150.4);
+  --secondary-650: rgb(170.1, 167.45, 160.85);
+  --secondary-700: rgb(180.8, 178.1, 171.3);
+  --secondary-750: rgb(191.5, 188.75, 181.75);
+  --secondary-800: rgb(202.2, 199.4, 192.2);
+  --secondary-850: rgb(212.9, 210.05, 202.65);
+  --secondary-900: rgb(223.6, 220.7, 213.1);
+  --secondary-950: rgb(234.3, 231.35, 223.55);
+  --secondary-high: rgb(223.6, 220.7, 213.1);
+  --secondary-midium: rgb(180.8, 178.1, 171.3);
+  --secondary-low-mid: rgb(138, 135.5, 129.5);
+  --secondary-low: rgb(73.8, 71.6, 66.8);
+  --secondary-very-low: rgb(31.107, 29.1065, 25.1045);
+  --tertiary-rgb: 149, 89, 65;
+  --tertiary: rgb(149, 89, 65);
+  --tertiary-50: rgb(240.2, 234.35, 225.55);
+  --tertiary-100: rgb(235.4, 226.7, 217.1);
+  --tertiary-150: rgb(230.6, 219.05, 208.65);
+  --tertiary-200: rgb(225.8, 211.4, 200.2);
+  --tertiary-250: rgb(221, 203.75, 191.75);
+  --tertiary-300: rgb(216.2, 196.1, 183.3);
+  --tertiary-350: rgb(211.4, 188.45, 174.85);
+  --tertiary-400: rgb(206.6, 180.8, 166.4);
+  --tertiary-450: rgb(201.8, 173.15, 157.95);
+  --tertiary-500: rgb(197, 165.5, 149.5);
+  --tertiary-550: rgb(192.2, 157.85, 141.05);
+  --tertiary-600: rgb(187.4, 150.2, 132.6);
+  --tertiary-650: rgb(182.6, 142.55, 124.15);
+  --tertiary-700: rgb(177.8, 134.9, 115.7);
+  --tertiary-750: rgb(173, 127.25, 107.25);
+  --tertiary-800: rgb(168.2, 119.6, 98.8);
+  --tertiary-850: rgb(163.4, 111.95, 90.35);
+  --tertiary-900: rgb(158.6, 104.3, 81.9);
+  --tertiary-950: rgb(153.8, 96.65, 73.45);
+  --tertiary-high: rgb(158.6, 104.3, 81.9);
+  --tertiary-midium: rgb(177.8, 134.9, 115.7);
+  --tertiary-low-mid: rgb(197, 165.5, 149.5);
+  --tertiary-low: rgb(225.8, 211.4, 200.2);
+  --tertiary-very-low: rgb(244.952, 241.9235, 233.9155);
+  --surface: #f8f5ed;
+  --surface-soft: #ebe5d9;
+  --border-subtle: #c9c0b0;
+  --border-strong: #2b2924;
+  --text-strong: #1f1d19;
+  --text-main: #37332d;
+  --text-muted: #756e63;
+  --accent: #955941;
+  --accent-soft: rgba(149, 89, 65, 0.12);
+  --accent-contrast: #f7f3e9;
+  --verdigris: #55766b;
+  --paper: #f5f2ea;
+  --paper-deep: #eee8dc;
+  --label: #6c655b;
+  --logo-filter: grayscale(1) sepia(0.3) contrast(1.05);
 }
-
-.content > .post > .post-content > p {
-  word-wrap: break-word;
-  word-break: break-all;
-}
-
-#ds-thread,
-#disqus_thread,
-#cloud-tie-wrapper {
-  margin: 0 30px !important;
-}
-
-html {
-  -webkit-font-smoothing: antialiased;
-  height: 100%;
-  max-height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  line-height: 1.7;
-  color: var(--text-main);
-  font-family: Inter, "Open Sans", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  font-size: 16px;
-  width: 100%;
-  margin: 0 auto 30px auto;
-  background: radial-gradient(circle at 70% 0%, rgba(88, 166, 255, 0.06), transparent 34%), var(--secondary);
-  transition: background-color 0.8s, color 0.8s;
-}
-
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin: 2rem 0;
-}
-
-h1 {
-  font-size: 2.1rem;
-  line-height: 1.2em;
-}
-
-h2 {
-  font-size: 1.9rem;
-  line-height: 1.2em;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.3rem;
-}
-
-h5 {
-  font-size: 1.2rem;
-}
-
-h6 {
-  font-size: 1.1rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-p,
-ul,
-ol,
-dl {
-  margin: 1em 0;
-}
-
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-  margin: 0.4em 0;
-}
-
-ol.toclist-child {
-  padding-inline-start: 15px;
-}
-
-ul p,
-ol p,
-li p,
-.content li p,
-blockquote p,
-.content blockquote p,
-.post blockquote p,
-.post li p {
-  margin: 0;
-  overflow: visible;
-}
-
-a img {
-  border: none;
-}
-
-p {
-  line-height: 1.85;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:link,
-a:visited {
-  opacity: 1;
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  -ms-transition: all 0.15s linear;
-  transition: all 0.15s linear;
-  color: var(--accent);
-}
-
-a:hover,
-a:active {
-  color: var(--text-strong);
-}
-
-dl dt {
-  float: left;
-  width: 180px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-dl dd {
-  margin-left: 200px;
-  margin-bottom: 1em;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid var(--primary-100);
-  margin: 3.2em 0;
-  padding: 0;
-}
-
-blockquote {
-  box-sizing: border-box;
-  margin: 1.6em 0 1.6em 0em;
-  padding: 0 0 0 1.6em;
-  border-left: #f66 0.3em solid;
-  background-color: cssrgba(var(--primary-rgb), 0.03);
-}
-blockquote p {
-  margin: 0.8em 0;
-  padding: 1em 0;
-}
-blockquote small {
-  display: inline-block;
-  margin: 0.8em 0 0.8em 1.5em;
-  font-size: 0.9em;
-  color: #ccc;
-}
-blockquote small:before {
-  content: "— ";
-}
-blockquote cite {
-  font-weight: bold;
-}
-blockquote cite a {
-  font-weight: normal;
-}
-
-mark {
-  background-color: #ffc336;
-}
-
-code,
-tt {
-  padding: 1px 3px;
-  font-family: var(--mono-font-face);
-  white-space: pre-wrap;
-  background-color: var(--secondary-950);
-  transition: background-color 0.8s, border 0.8s;
-  color: var(--primary-700);
-  border-radius: 3px;
-}
-
-pre {
-  font-size: 15px;
-  background-color: var(--secondary-950) !important;
-  font-family: var(--mono-font-face) !important;
-  color: var(--primary-700) !important;
-}
-
-kbd {
-  display: inline-block;
-  margin-bottom: 0.4em;
-  padding: 1px 8px;
-  border: var(--primary-200) 1px solid;
-  color: var(--primary-700);
-  font-size: 0.9em;
-  font-weight: bold;
-  background: var(--primary-50);
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
-}
-
-table {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1em 0;
-  width: 100%;
-  max-width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
-}
-
-table,
-table tr,
-table tr td,
-table tr th {
-  border-color: transparent;
-}
-
-table th {
-  color: var(--primary-700);
-  background-color: rgba(63, 185, 237, 0.15);
-}
-
-tr th {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-
-tr th,
-tr td {
-  padding: 5px 20px;
-  border-right: 1px solid;
-  font-size: 1rem;
-}
-
-tr th:last-child,
-tr td:last-child {
-  border-right: 0px;
-}
-
-table th {
-  font-weight: bold;
-}
-
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-  background-color: var(--secondary-950);
-}
-
-.gist {
-  font-size: 12px;
-}
-.gist table {
-  margin: 0;
-  width: auto;
-}
-.gist table pre {
-  font-size: 12px;
-}
-.gist table .line-numbers {
-  font-size: 12px;
-}
-
-.katex .katex-html {
-  display: none;
-}@charset "UTF-8";
+@charset "UTF-8";
 figure.highlight {
   position: relative !important;
   margin: 1em 0 !important;
@@ -1515,7 +1243,8 @@ pre .xml .vbscript,
 pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5 !important;
-}@charset "UTF-8";
+}
+@charset "UTF-8";
 .content {
   height: auto;
   float: right;
@@ -2520,7 +2249,310 @@ a.btn {
   width: 80%;
   margin-top: 1%;
   margin-left: 7.2%;
-}.searchbox .searchbox-selectable {
+}
+@charset "UTF-8";
+:root {
+  --mono-font-face: 'mononoki', 'Consolas', 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', 'courier',
+    monospace;
+}
+
+.content > .post > .post-content > p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#ds-thread,
+#disqus_thread,
+#cloud-tie-wrapper {
+  margin: 0 30px !important;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-main);
+  font-family: Inter, "Open Sans", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  background: radial-gradient(circle at 70% 0%, rgba(88, 166, 255, 0.06), transparent 34%), var(--secondary);
+  transition: background-color 0.8s, color 0.8s;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.9rem;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 1em 0;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0.4em 0;
+}
+
+ol.toclist-child {
+  padding-inline-start: 15px;
+}
+
+ul p,
+ol p,
+li p,
+.content li p,
+blockquote p,
+.content blockquote p,
+.post blockquote p,
+.post li p {
+  margin: 0;
+  overflow: visible;
+}
+
+a img {
+  border: none;
+}
+
+p {
+  line-height: 1.85;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  opacity: 1;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  color: var(--accent);
+}
+
+a:hover,
+a:active {
+  color: var(--text-strong);
+}
+
+dl dt {
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+dl dd {
+  margin-left: 200px;
+  margin-bottom: 1em;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--primary-100);
+  margin: 3.2em 0;
+  padding: 0;
+}
+
+blockquote {
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em 0em;
+  padding: 0 0 0 1.6em;
+  border-left: #f66 0.3em solid;
+  background-color: cssrgba(var(--primary-rgb), 0.03);
+}
+blockquote p {
+  margin: 0.8em 0;
+  padding: 1em 0;
+}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc;
+}
+blockquote small:before {
+  content: "— ";
+}
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+  font-weight: normal;
+}
+
+mark {
+  background-color: #ffc336;
+}
+
+code,
+tt {
+  padding: 1px 3px;
+  font-family: var(--mono-font-face);
+  white-space: pre-wrap;
+  background-color: var(--secondary-950);
+  transition: background-color 0.8s, border 0.8s;
+  color: var(--primary-700);
+  border-radius: 3px;
+}
+
+pre {
+  font-size: 15px;
+  background-color: var(--secondary-950) !important;
+  font-family: var(--mono-font-face) !important;
+  color: var(--primary-700) !important;
+}
+
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: var(--primary-200) 1px solid;
+  color: var(--primary-700);
+  font-size: 0.9em;
+  font-weight: bold;
+  background: var(--primary-50);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
+}
+
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  background-color: transparent;
+}
+
+table,
+table tr,
+table tr td,
+table tr th {
+  border-color: transparent;
+}
+
+table th {
+  color: var(--primary-700);
+  background-color: rgba(63, 185, 237, 0.15);
+}
+
+tr th {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+tr th,
+tr td {
+  padding: 5px 20px;
+  border-right: 1px solid;
+  font-size: 1rem;
+}
+
+tr th:last-child,
+tr td:last-child {
+  border-right: 0px;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: var(--secondary-950);
+}
+
+.gist {
+  font-size: 12px;
+}
+.gist table {
+  margin: 0;
+  width: auto;
+}
+.gist table pre {
+  font-size: 12px;
+}
+.gist table .line-numbers {
+  font-size: 12px;
+}
+
+.katex .katex-html {
+  display: none;
+}
+.searchbox .searchbox-selectable {
   cursor: pointer;
 }
 
@@ -2637,4 +2669,517 @@ a.btn {
 }
 .ins-section header .ins-title {
   margin-left: 8px;
+}
+@charset "UTF-8";
+:root {
+  --editorial-serif: 'Iowan Old Style', Baskerville, 'Songti SC', STSong, 'Noto Serif CJK SC', Georgia, serif;
+  --editorial-sans: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --editorial-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+::selection {
+  color: var(--accent-contrast);
+  background: var(--accent);
+}
+
+body {
+  color: var(--text-main);
+  background: var(--paper);
+  font-family: var(--editorial-sans);
+  counter-reset: archive-entry;
+}
+
+body,
+.sidebar,
+.post,
+.footer,
+.searchbox .searchbox-input-wrapper .searchbox-input,
+.ins-section-container {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a:link,
+a:visited {
+  color: var(--accent);
+}
+
+a:hover,
+a:active {
+  color: var(--text-strong);
+}
+
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border-strong);
+}
+.sidebar .logo-title {
+  padding: 48px 32px 24px;
+  text-align: left;
+}
+.sidebar .logo-title::before {
+  content: "01 / PERSONAL ARCHIVE";
+  display: block;
+  margin-bottom: 22px;
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.sidebar .logo-title .logo {
+  margin: 0;
+}
+.sidebar .logo-title .title img {
+  box-sizing: border-box;
+  padding: 6px;
+  border: 1px solid var(--border-subtle);
+  background: var(--paper-deep);
+  filter: var(--logo-filter);
+}
+.sidebar .logo-title .title h3 {
+  margin-top: 22px;
+  font-family: var(--editorial-serif);
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+.sidebar .logo-title .title a {
+  color: var(--text-strong);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.sidebar .logo-title .description {
+  max-width: 210px;
+  margin: 15px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.sidebar .social-links {
+  margin: 0 32px 28px;
+  text-align: left;
+}
+.sidebar .social-links li {
+  padding: 0 14px 0 0;
+}
+.sidebar .social-links a:hover {
+  color: var(--accent);
+}
+.sidebar .footer {
+  box-sizing: border-box;
+  padding: 0 32px 16px;
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.sidebar-top .ltr {
+  text-align: left;
+}
+
+.sidebar-navigation {
+  margin: 0 32px;
+  padding: 20px 0;
+  border-color: var(--border-subtle);
+}
+.sidebar-navigation::before {
+  content: "REGISTER / INDEX";
+  display: block;
+  margin-bottom: 14px;
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+.sidebar-navigation .nav {
+  font-size: 14px;
+}
+.sidebar-navigation .nav li {
+  margin: 0;
+  border-top: 1px solid var(--border-subtle);
+}
+.sidebar-navigation .nav li:last-child {
+  border-bottom: 1px solid var(--border-subtle);
+}
+.sidebar-navigation .nav a {
+  min-height: 42px;
+  padding: 0 8px;
+  border-radius: 0;
+  color: var(--text-main);
+  font-family: var(--editorial-sans);
+}
+.sidebar-navigation .nav a::after {
+  content: "↗";
+  margin-left: auto;
+  color: var(--label);
+  font-size: 13px;
+}
+.sidebar-navigation .nav a:hover {
+  color: var(--accent);
+  background: transparent;
+}
+.sidebar-navigation .nav a.current {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  font-weight: 500;
+}
+.sidebar-navigation .nav a.current::before {
+  display: none;
+}
+.sidebar-navigation .nav a.current::after {
+  color: var(--accent-contrast);
+}
+.sidebar-navigation .sidebar-tools {
+  margin-top: 22px;
+}
+.sidebar-navigation .sidebar-tools::before {
+  content: "TOOLS";
+  display: block;
+  margin-bottom: 10px;
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+.sidebar-navigation .sidebar-tools .nav_right_btn {
+  gap: 10px;
+  padding: 0;
+}
+.sidebar-navigation .sidebar-tools .nav_right_btn a {
+  width: 38px;
+  height: 38px;
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+}
+.sidebar-navigation .sidebar-tools .nav_right_btn a:hover {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.content {
+  padding-top: 48px;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 38px;
+  color: var(--text-main);
+  counter-increment: archive-entry;
+}
+.post::before {
+  content: "ENTRY " counter(archive-entry, decimal-leading-zero) " / FIELD NOTE";
+  display: block;
+  margin-bottom: 17px;
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.post .post-title h1,
+.post .post-title h2,
+.post .post-title h3 {
+  color: var(--text-strong);
+  font-family: var(--editorial-serif);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.post .post-title h3 {
+  margin: 0 0 14px;
+  font-size: 38px;
+  line-height: 1.08;
+}
+.post .post-title a {
+  color: var(--text-strong);
+}
+.post .post-title a:hover {
+  color: var(--accent);
+}
+.post .post-content {
+  color: var(--text-main);
+}
+.post .post-content > p:first-child {
+  margin-top: 0;
+}
+.post .post-content h1,
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 {
+  color: var(--text-strong);
+  font-family: var(--editorial-serif);
+  font-weight: 500;
+}
+.post .post-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.post .post-footer {
+  padding: 15px 0 24px;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.post .post-footer .meta {
+  min-height: 24px;
+  height: auto;
+  color: var(--label);
+}
+.post .post-footer .meta .info {
+  display: flex;
+  float: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  font-family: var(--editorial-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+.post .post-footer .meta a {
+  padding-right: 0;
+  color: var(--label);
+}
+.post .post-footer .meta a:hover {
+  color: var(--accent);
+}
+.post .post-footer .meta i {
+  margin-right: 0;
+  color: var(--verdigris);
+}
+
+p {
+  color: var(--text-main);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+blockquote {
+  margin: 2em 0;
+  padding: 24px 28px;
+  color: var(--accent-contrast);
+  border: 0;
+  background: var(--accent);
+}
+blockquote p,
+blockquote a {
+  color: inherit;
+}
+
+hr {
+  border-top-color: var(--border-subtle);
+}
+
+code,
+tt,
+pre {
+  color: #e9e0d1 !important;
+  background: #211f1b !important;
+  border-radius: 0;
+}
+
+code,
+tt {
+  border: 1px solid #494238;
+}
+
+table,
+table tr,
+table tr td,
+table tr th {
+  border-color: var(--border-subtle);
+}
+
+table th {
+  color: var(--text-strong);
+  background: var(--surface-soft);
+  font-family: var(--editorial-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background: var(--paper-deep);
+}
+
+.list-with-title .listing-title {
+  color: var(--text-strong);
+  font-family: var(--editorial-serif);
+  font-size: 34px;
+  font-weight: 500;
+}
+.list-with-title .listing .listing-post {
+  align-items: baseline;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+.list-with-title .listing .listing-post a {
+  color: var(--text-main);
+  font-family: var(--editorial-serif);
+  font-size: 19px;
+}
+.list-with-title .listing .listing-post a:hover {
+  color: var(--accent);
+}
+.list-with-title .listing .listing-post .post-time {
+  color: var(--label);
+  font-family: var(--editorial-mono);
+  font-size: 10px;
+}
+
+.tag_btn,
+.btn,
+.friend-link-box,
+.float-button,
+.indicator,
+.tip {
+  border-radius: 0;
+}
+
+.tag_btn {
+  color: var(--text-main);
+}
+.tag_btn .tag_count {
+  color: var(--accent-contrast);
+  background: var(--accent);
+}
+
+.share > .share-btn,
+.share .weibo,
+.share .twitter,
+.share .mastodon {
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  background: transparent;
+}
+.share > .share-btn a,
+.share .weibo a,
+.share .twitter a,
+.share .mastodon a {
+  color: var(--text-main);
+}
+.share > .share-btn:hover,
+.share .weibo:hover,
+.share .twitter:hover,
+.share .mastodon:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+.share > .share-btn:hover a,
+.share .weibo:hover a,
+.share .twitter:hover a,
+.share .mastodon:hover a {
+  color: var(--accent-contrast);
+}
+
+.float-button {
+  color: var(--text-main);
+  background: var(--surface);
+  border-color: var(--border-subtle);
+}
+.float-button:hover, .float-button:active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.float-button:hover i, .float-button:active i {
+  color: var(--accent-contrast);
+}
+
+.modal-cover {
+  background: rgba(27, 24, 20, 0.78);
+}
+
+.searchbox .searchbox-container {
+  border: 1px solid var(--border-strong);
+  box-shadow: 10px 10px 0 rgba(28, 25, 21, 0.18);
+}
+
+.searchbox .searchbox-input-wrapper .searchbox-input {
+  color: var(--text-strong);
+  background: var(--surface);
+  border-bottom-color: var(--border-subtle);
+  font-family: var(--editorial-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.ins-section-container {
+  background: var(--surface);
+}
+
+.ins-section .ins-section-header {
+  color: var(--label);
+  border-bottom-color: var(--border-subtle);
+  font-family: var(--editorial-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+.ins-section .ins-slug,
+.ins-section .ins-search-item .ins-search-preview {
+  color: var(--label);
+}
+.ins-section .ins-search-item:hover,
+.ins-section .ins-search-item.active {
+  color: var(--accent-contrast);
+  background: var(--accent);
+}
+.ins-section .ins-search-item:hover .ins-slug,
+.ins-section .ins-search-item:hover .ins-search-preview,
+.ins-section .ins-search-item.active .ins-slug,
+.ins-section .ins-search-item.active .ins-search-preview {
+  color: var(--accent-contrast);
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .sidebar .logo-title {
+    padding: 28px 24px 18px;
+  }
+  .sidebar .logo-title::before {
+    margin-bottom: 16px;
+  }
+  .sidebar .logo-title .title h3 {
+    font-size: 27px;
+  }
+  .sidebar .logo-title .description {
+    max-width: 320px;
+  }
+  .sidebar .social-links {
+    margin: 0 24px 22px;
+  }
+  .sidebar-navigation {
+    margin: 0 24px;
+  }
+  .sidebar-navigation .nav {
+    gap: 0 18px;
+  }
+  .sidebar-navigation .nav li:nth-child(2) {
+    border-top: 1px solid var(--border-subtle);
+  }
+  .content {
+    padding-top: 32px;
+  }
+  .post .post-title h3 {
+    font-size: 31px;
+    line-height: 1.15;
+  }
+  .post .post-footer .meta .info {
+    display: block;
+  }
+  .post .post-footer .meta .info > * {
+    margin-right: 7px;
+  }
+  .searchbox .searchbox-container {
+    border: 0;
+    box-shadow: none;
+  }
 }

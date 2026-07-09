@@ -1,7 +1,7 @@
 keywords: Blog,Hexo,技术博客,学习笔记
 author: Psyduck2887
 description: 个人技术博客，记录学习笔记、项目实践与踩坑总结。
-defaultTheme: dark
+defaultTheme: light
 
 favicon: /images/favicon.webp
 avatar: /images/logo.webp

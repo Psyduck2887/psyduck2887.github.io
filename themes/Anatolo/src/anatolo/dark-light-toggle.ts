@@ -14,7 +14,7 @@ setTheme();
 export function darkLightToggle() {
   let themeNow = getTheme();
   if (themeNow === 'default') {
-    themeNow = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'true';
+    themeNow = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
   if (themeNow === 'dark') {
     localStorage.setItem('theme', 'light');

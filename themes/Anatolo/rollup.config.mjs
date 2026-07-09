@@ -2,6 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import sass from 'rollup-plugin-sass';
 import { defineConfig } from 'rollup';
 import swc from 'unplugin-swc';
+import { writeFileSync } from 'node:fs';
+import { resolve as resolvePath } from 'node:path';
 
 export default defineConfig([
   // browser-friendly UMD build
@@ -25,7 +27,18 @@ export default defineConfig([
         },
       }),
       sass({
-        output: true,
+        output(_styles, styleNodes) {
+          const orderedStyles = [...styleNodes].sort((left, right) => {
+            const leftIsArchiveTheme = left.id.endsWith('archive-theme.scss');
+            const rightIsArchiveTheme = right.id.endsWith('archive-theme.scss');
+            return Number(leftIsArchiveTheme) - Number(rightIsArchiveTheme);
+          });
+
+          writeFileSync(
+            resolvePath(import.meta.dirname || '.', 'source/js_complied/bundle.css'),
+            orderedStyles.map(({ content }) => content).join('\n'),
+          );
+        },
       }),
     ],
   },
