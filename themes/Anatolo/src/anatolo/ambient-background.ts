@@ -1,38 +1,19 @@
 type RGB = readonly [number, number, number];
 
-interface FluidSource {
-  originX: number;
-  originY: number;
-  travelX: number;
-  travelY: number;
-  scaleX: number;
-  scaleY: number;
-  speed: number;
-  phase: number;
-  strength: number;
-}
-
 const lightColors: RGB[] = [
   [249, 248, 243],
-  [226, 238, 225],
-  [171, 207, 178],
-  [96, 145, 107],
-  [48, 93, 61],
+  [232, 242, 231],
+  [201, 223, 204],
+  [143, 181, 149],
+  [104, 151, 114],
 ];
 
 const darkColors: RGB[] = [
   [18, 25, 20],
-  [27, 43, 32],
-  [44, 76, 54],
-  [72, 119, 84],
-  [116, 162, 124],
-];
-
-const sources: FluidSource[] = [
-  { originX: 0.08, originY: 0.1, travelX: 0.3, travelY: 0.2, scaleX: 0.42, scaleY: 0.58, speed: 0.000075, phase: 0, strength: 1.06 },
-  { originX: 0.76, originY: 0.08, travelX: 0.24, travelY: 0.28, scaleX: 0.48, scaleY: 0.4, speed: 0.00009, phase: 1.7, strength: 0.98 },
-  { originX: 0.28, originY: 0.78, travelX: 0.3, travelY: 0.18, scaleX: 0.46, scaleY: 0.48, speed: 0.000064, phase: 3.2, strength: 1.12 },
-  { originX: 0.84, originY: 0.74, travelX: 0.2, travelY: 0.25, scaleX: 0.38, scaleY: 0.52, speed: 0.000082, phase: 4.8, strength: 0.94 },
+  [31, 47, 35],
+  [52, 82, 59],
+  [78, 119, 87],
+  [106, 150, 115],
 ];
 
 function clamp(value: number, minimum = 0, maximum = 1) {
@@ -53,13 +34,13 @@ function mixColor(start: RGB, end: RGB, amount: number): RGB {
 }
 
 function colorForField(colors: RGB[], field: number): RGB {
-  if (field < 0.31) return colors[0];
-  if (field < 0.45) return mixColor(colors[0], colors[1], smoothstep(0.31, 0.45, field));
-  if (field < 0.58) return colors[1];
-  if (field < 0.7) return mixColor(colors[1], colors[2], smoothstep(0.58, 0.7, field));
+  if (field < 0.28) return colors[0];
+  if (field < 0.42) return mixColor(colors[0], colors[1], smoothstep(0.28, 0.42, field));
+  if (field < 0.56) return colors[1];
+  if (field < 0.68) return mixColor(colors[1], colors[2], smoothstep(0.56, 0.68, field));
   if (field < 0.79) return colors[2];
-  if (field < 0.89) return mixColor(colors[2], colors[3], smoothstep(0.79, 0.89, field));
-  return mixColor(colors[3], colors[4], smoothstep(0.89, 1, field));
+  if (field < 0.9) return mixColor(colors[2], colors[3], smoothstep(0.79, 0.9, field));
+  return mixColor(colors[3], colors[4], smoothstep(0.9, 1, field));
 }
 
 export function initAmbientBackground() {
@@ -102,31 +83,31 @@ export function initAmbientBackground() {
 
       const motionTime = reducedMotion.matches ? 0 : time;
       const colors = currentTheme === 'dark' ? darkColors : lightColors;
-      const sourcePositions = sources.map((source) => ({
-        ...source,
-        x: source.originX + Math.sin(motionTime * source.speed + source.phase) * source.travelX,
-        y: source.originY + Math.cos(motionTime * source.speed * 0.82 + source.phase) * source.travelY,
-      }));
       const image = context.createImageData(width, height);
       const pixels = image.data;
+      const primaryPhase = motionTime * 0.000052;
+      const secondaryPhase = motionTime * 0.000031;
 
       for (let y = 0; y < height; y += 1) {
         const normalizedY = y / height;
         for (let x = 0; x < width; x += 1) {
           const normalizedX = x / width;
-          let field = 0;
-
-          for (const source of sourcePositions) {
-            const deltaX = (normalizedX - source.x) / source.scaleX;
-            const deltaY = (normalizedY - source.y) / source.scaleY;
-            field += Math.exp(-(deltaX * deltaX + deltaY * deltaY) * 1.72) * source.strength;
-          }
-
-          const contour =
-            Math.sin(normalizedX * 8.2 + motionTime * 0.00011) * 0.045 +
-            Math.sin(normalizedY * 7.4 - motionTime * 0.00009) * 0.04 +
-            Math.sin((normalizedX + normalizedY) * 5.1 + motionTime * 0.00006) * 0.035;
-          const normalizedField = clamp((field + contour - 0.36) / 1.28);
+          const horizontalWarp =
+            Math.sin(normalizedY * 5.2 + primaryPhase * 0.72) * 0.105 +
+            Math.sin((normalizedX + normalizedY) * 3.1 - secondaryPhase) * 0.045;
+          const verticalWarp =
+            Math.cos(normalizedX * 4.4 - primaryPhase * 0.58) * 0.085 +
+            Math.sin((normalizedX - normalizedY) * 2.8 + secondaryPhase * 0.8) * 0.04;
+          const primaryTide = Math.sin(
+            (normalizedX * 0.72 + normalizedY * 0.28 + horizontalWarp) * Math.PI * 2 - primaryPhase,
+          );
+          const crossingTide = Math.sin(
+            (normalizedX * -0.18 + normalizedY * 0.82 + verticalWarp) * Math.PI * 1.46 + secondaryPhase,
+          );
+          const broadLift = Math.sin(
+            (normalizedX * 0.34 - normalizedY * 0.2) * Math.PI * 2 + secondaryPhase * 0.62,
+          );
+          const normalizedField = clamp(0.5 + primaryTide * 0.22 + crossingTide * 0.095 + broadLift * 0.055);
           const color = colorForField(colors, normalizedField);
           const index = (y * width + x) * 4;
           pixels[index] = color[0];
