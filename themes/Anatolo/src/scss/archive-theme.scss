@@ -13,9 +13,24 @@
 
 body {
   color: var(--text-main);
-  background: var(--paper);
+  background: transparent;
   font-family: var(--editorial-sans);
   counter-reset: archive-entry;
+}
+
+.ambient-background {
+  position: fixed;
+  z-index: 0;
+  top: -12vh;
+  left: -12vw;
+  width: 124vw;
+  height: 124vh;
+  pointer-events: none;
+  filter: blur(10px) saturate(112%) contrast(104%);
+  image-rendering: auto;
+  opacity: 1;
+  transform: scale(1.08);
+  transform-origin: center;
 }
 
 body,
@@ -41,8 +56,10 @@ a:active {
 }
 
 .sidebar {
-  background: var(--surface);
+  background: var(--sidebar-glass);
   border-right: 1px solid var(--border-strong);
+  -webkit-backdrop-filter: blur(28px) saturate(125%);
+  backdrop-filter: blur(28px) saturate(125%);
 
   .logo-title {
     padding: 48px 32px 24px;
@@ -64,11 +81,16 @@ a:active {
 
     .title {
       img {
+        display: block;
+        width: 112px;
+        height: 112px;
         box-sizing: border-box;
-        padding: 6px;
-        border: 1px solid var(--border-subtle);
-        background: var(--paper-deep);
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        background: transparent;
         filter: var(--logo-filter);
+        object-fit: contain;
       }
 
       h3 {
@@ -220,14 +242,26 @@ a:active {
 }
 
 .content {
+  position: relative;
+  z-index: 1;
   padding-top: 48px;
+  background: var(--content-glass);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .post {
   position: relative;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
+  padding: 30px 42px 0;
   color: var(--text-main);
   counter-increment: archive-entry;
+  background: var(--panel-glass);
+  border: 1px solid rgba(var(--primary-rgb), 0.18);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 22px 62px var(--panel-shadow);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(120%);
 
   &::before {
     content: 'ENTRY ' counter(archive-entry, decimal-leading-zero) ' / FIELD NOTE';
@@ -539,6 +573,11 @@ table tbody > tr:nth-child(odd) > th {
         font-size: 27px;
       }
 
+      .title img {
+        width: 112px;
+        height: 112px;
+      }
+
       .description {
         max-width: 320px;
       }
@@ -566,6 +605,10 @@ table tbody > tr:nth-child(odd) > th {
   }
 
   .post {
+    margin-right: 14px;
+    margin-left: 14px;
+    padding: 24px 24px 0;
+
     .post-title h3 {
       font-size: 31px;
       line-height: 1.15;
@@ -578,6 +621,10 @@ table tbody > tr:nth-child(odd) > th {
         margin-right: 7px;
       }
     }
+  }
+
+  .ambient-background {
+    filter: blur(8px) saturate(110%) contrast(103%);
   }
 
   .searchbox .searchbox-container {

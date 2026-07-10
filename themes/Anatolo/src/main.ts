@@ -5,6 +5,7 @@ import './scss/highlight.scss';
 import './scss/style.scss';
 
 import { Anatolo } from './anatolo/anatolo';
+import { initAmbientBackground } from './anatolo/ambient-background';
 import * as Utils from './utils/main';
 import FloatBtn from './components/float-btn';
 import './components/rightbtn';
@@ -12,4 +13,5 @@ import './components/rightbtn';
 (window as any).Anatolo = Anatolo;
 (window as any).Utils = Utils;
 
+initAmbientBackground();
 new FloatBtn();
