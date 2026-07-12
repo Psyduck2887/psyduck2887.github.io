@@ -3,7 +3,7 @@ author: Psyduck2887
 description: 个人技术博客，记录学习笔记、项目实践与踩坑总结。
 defaultTheme: light
 
-favicon: /images/favicon.webp
+favicon: /images/duck-logo.webp
 avatar: /images/logo.webp
 logo_dir: /images/duck-logo.webp
 logo_style: width:112px;

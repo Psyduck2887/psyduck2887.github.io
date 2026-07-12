@@ -85,8 +85,8 @@ export function initAmbientBackground() {
       const colors = currentTheme === 'dark' ? darkColors : lightColors;
       const image = context.createImageData(width, height);
       const pixels = image.data;
-      const primaryPhase = motionTime * 0.000052;
-      const secondaryPhase = motionTime * 0.000031;
+      const primaryPhase = motionTime * 0.0000728;
+      const secondaryPhase = motionTime * 0.0000434;
 
       for (let y = 0; y < height; y += 1) {
         const normalizedY = y / height;
