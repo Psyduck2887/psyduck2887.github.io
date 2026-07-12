@@ -7,8 +7,8 @@ tags:
   - 现代诗
 ---
 
+<div style="text-align:center;font-weight:600;">“海雨”</div>
 <div style="text-align:center;">
-
 乌云用雨滴扣响门窗。<br>
 “你的心中在想着谁呢？”<br>
 我不说话。<br>
@@ -16,5 +16,4 @@ tags:
 我不回答。<br>
 直到大海的心中激起浪花，<br>
 “是她，是她。”
-
 </div>

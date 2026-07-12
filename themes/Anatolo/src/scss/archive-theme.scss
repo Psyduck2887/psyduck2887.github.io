@@ -26,7 +26,7 @@ body {
   width: 124vw;
   height: 124vh;
   pointer-events: none;
-  filter: blur(10px) saturate(112%) contrast(104%);
+  filter: blur(10px) saturate(118%) contrast(108%);
   image-rendering: auto;
   opacity: 1;
   transform: scale(1.08);
@@ -111,10 +111,11 @@ a:active {
 
     .description {
       max-width: 210px;
-      margin: 15px 0 0;
+      margin: 15px auto 0;
       color: var(--text-muted);
       font-size: 13px;
       line-height: 1.7;
+      text-align: center;
     }
   }
 
@@ -151,16 +152,19 @@ a:active {
 .sidebar-navigation {
   margin: 0 32px;
   padding: 20px 0;
+  border-top: 0;
   border-color: var(--border-subtle);
 
   &::before {
     content: 'REGISTER / INDEX';
     display: block;
     margin-bottom: 14px;
+    padding-left: 8px;
     color: var(--label);
     font-family: var(--editorial-mono);
     font-size: 9px;
     letter-spacing: 0.18em;
+    box-sizing: border-box;
   }
 
   .nav {
@@ -181,13 +185,6 @@ a:active {
       border-radius: 0;
       color: var(--text-main);
       font-family: var(--editorial-sans);
-
-      &::after {
-        content: '\2197';
-        margin-left: auto;
-        color: var(--label);
-        font-size: 13px;
-      }
     }
 
     a:hover {
@@ -202,10 +199,6 @@ a:active {
 
       &::before {
         display: none;
-      }
-
-      &::after {
-        color: var(--accent-contrast);
       }
     }
   }
@@ -263,8 +256,9 @@ a:active {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  font-size: 15px;
-  font-family: var(--ui-font);
+  font-size: 13px;
+  font-family: var(--editorial-mono);
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   background: var(--sidebar-glass);
   border: 1px solid var(--border-subtle);
@@ -278,7 +272,7 @@ a:active {
     background-color 0.15s ease;
 
   i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   &:hover {
@@ -296,7 +290,6 @@ a:active {
   counter-increment: archive-entry;
   background: var(--panel-glass);
   border: 1px solid rgba(var(--primary-rgb), 0.18);
-  border-left: 4px solid var(--accent);
   box-shadow: 0 22px 62px var(--panel-shadow);
   -webkit-backdrop-filter: blur(20px) saturate(120%);
   backdrop-filter: blur(20px) saturate(120%);
@@ -602,10 +595,6 @@ table tbody > tr:nth-child(odd) > th {
 
     .logo-title {
       padding: 28px 24px 18px;
-
-      &::before {
-        margin-bottom: 16px;
-      }
 
       .title h3 {
         font-size: 27px;

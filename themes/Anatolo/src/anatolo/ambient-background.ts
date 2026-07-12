@@ -1,19 +1,19 @@
 type RGB = readonly [number, number, number];
 
 const lightColors: RGB[] = [
-  [249, 248, 243],
-  [232, 242, 231],
-  [201, 223, 204],
-  [143, 181, 149],
-  [104, 151, 114],
+  [234, 238, 229],
+  [209, 226, 208],
+  [175, 205, 179],
+  [126, 165, 132],
+  [91, 135, 101],
 ];
 
 const darkColors: RGB[] = [
-  [18, 25, 20],
-  [31, 47, 35],
-  [52, 82, 59],
-  [78, 119, 87],
-  [106, 150, 115],
+  [15, 21, 17],
+  [27, 40, 30],
+  [45, 71, 51],
+  [68, 104, 76],
+  [92, 131, 101],
 ];
 
 function clamp(value: number, minimum = 0, maximum = 1) {
@@ -34,13 +34,14 @@ function mixColor(start: RGB, end: RGB, amount: number): RGB {
 }
 
 function colorForField(colors: RGB[], field: number): RGB {
-  if (field < 0.28) return colors[0];
-  if (field < 0.42) return mixColor(colors[0], colors[1], smoothstep(0.28, 0.42, field));
-  if (field < 0.56) return colors[1];
-  if (field < 0.68) return mixColor(colors[1], colors[2], smoothstep(0.56, 0.68, field));
-  if (field < 0.79) return colors[2];
-  if (field < 0.9) return mixColor(colors[2], colors[3], smoothstep(0.79, 0.9, field));
-  return mixColor(colors[3], colors[4], smoothstep(0.9, 1, field));
+  if (field < 0.3) return colors[0];
+  if (field < 0.38) return mixColor(colors[0], colors[1], smoothstep(0.3, 0.38, field));
+  if (field < 0.52) return colors[1];
+  if (field < 0.6) return mixColor(colors[1], colors[2], smoothstep(0.52, 0.6, field));
+  if (field < 0.74) return colors[2];
+  if (field < 0.82) return mixColor(colors[2], colors[3], smoothstep(0.74, 0.82, field));
+  if (field < 0.92) return colors[3];
+  return mixColor(colors[3], colors[4], smoothstep(0.92, 1, field));
 }
 
 export function initAmbientBackground() {
@@ -71,8 +72,8 @@ export function initAmbientBackground() {
       const colors = currentTheme === 'dark' ? darkColors : lightColors;
       const image = context.createImageData(width, height);
       const pixels = image.data;
-      const primaryPhase = motionTime * 0.0000728;
-      const secondaryPhase = motionTime * 0.0000434;
+      const primaryPhase = motionTime * 0.00009464;
+      const secondaryPhase = motionTime * 0.00005642;
 
       for (let y = 0; y < height; y += 1) {
         const normalizedY = y / height;
@@ -93,7 +94,7 @@ export function initAmbientBackground() {
           const broadLift = Math.sin(
             (normalizedX * 0.34 - normalizedY * 0.2) * Math.PI * 2 + secondaryPhase * 0.62,
           );
-          const normalizedField = clamp(0.5 + primaryTide * 0.22 + crossingTide * 0.095 + broadLift * 0.055);
+          const normalizedField = clamp(0.5 + primaryTide * 0.27 + crossingTide * 0.115 + broadLift * 0.065);
           const color = colorForField(colors, normalizedField);
           const index = (y * width + x) * 4;
           pixels[index] = color[0];

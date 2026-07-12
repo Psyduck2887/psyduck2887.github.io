@@ -2,7 +2,7 @@ if theme.rightbtn.back && is_post()
   a.content-back(
     href="/",
     onclick="try{var r=document.referrer;if(r&&new URL(r).origin===location.origin&&window.history.length>1){window.history.go(-1);return false;}}catch(e){}return true;",
-    title=__("back") || "Back"
+    title="Back"
   )
     i.fa.fa-arrow-left
-    span= __("back") || "Back"
+    span Back

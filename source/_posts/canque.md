@@ -7,8 +7,8 @@ tags:
   - 现代诗
 ---
 
+<div style="text-align:center;font-weight:600;">“残缺”</div>
 <div style="text-align:center;">
-
 我有时感觉自己是不完整的。<br>
 四肢虽然健全，<br>
 但心却空了一块儿，缺了一角。<br>
@@ -19,5 +19,4 @@ tags:
 只是橡树也有倒塌的一刻，钢铁也有生锈的那天。<br>
 我不会永远沉沦，<br>
 只是需要这一分，只是需要这一秒。
-
 </div>
