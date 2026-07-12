@@ -61,26 +61,12 @@ export function initAmbientBackground() {
     let lastFrame = 0;
     let currentTheme = document.documentElement.getAttribute('theme') ?? 'light';
 
-    const resize = () => {
-      const renderScale = window.innerWidth < 700 ? 0.25 : 0.3;
-      width = Math.max(210, Math.round(window.innerWidth * renderScale));
-      height = Math.max(210, Math.round(window.innerHeight * renderScale));
-      canvas.width = width;
-      canvas.height = height;
-    };
-
     const themeObserver = new MutationObserver(() => {
       currentTheme = document.documentElement.getAttribute('theme') ?? 'light';
     });
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['theme'] });
 
-    const draw = (time: number) => {
-      if (!reducedMotion.matches && time - lastFrame < 42) {
-        requestAnimationFrame(draw);
-        return;
-      }
-      lastFrame = time;
-
+    const renderFrame = (time: number) => {
       const motionTime = reducedMotion.matches ? 0 : time;
       const colors = currentTheme === 'dark' ? darkColors : lightColors;
       const image = context.createImageData(width, height);
@@ -118,7 +104,31 @@ export function initAmbientBackground() {
       }
 
       context.putImageData(image, 0, 0);
+    };
+
+    const draw = (time: number) => {
+      if (!reducedMotion.matches && time - lastFrame < 42) {
+        requestAnimationFrame(draw);
+        return;
+      }
+      lastFrame = time;
+      renderFrame(time);
       if (!reducedMotion.matches) requestAnimationFrame(draw);
+    };
+
+    let resizeRaf = 0;
+    const resize = () => {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        const renderScale = window.innerWidth < 700 ? 0.25 : 0.3;
+        width = Math.max(210, Math.round(window.innerWidth * renderScale));
+        height = Math.max(210, Math.round(window.innerHeight * renderScale));
+        canvas.width = width;
+        canvas.height = height;
+        // resize 清空了画布，立即同步重绘一帧，避免缩放时出现空白闪烁。
+        renderFrame(performance.now());
+      });
     };
 
     resize();
