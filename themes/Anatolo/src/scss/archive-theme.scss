@@ -1,9 +1,9 @@
 @import 'consts/consts.scss';
 
 :root {
-  --editorial-serif: 'Iowan Old Style', Baskerville, 'Songti SC', STSong, 'Noto Serif CJK SC', Georgia, serif;
-  --editorial-sans: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --editorial-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --editorial-serif: var(--reading-font);
+  --editorial-sans: var(--ui-font);
+  --editorial-mono: var(--mono-font-face);
 }
 
 ::selection {
