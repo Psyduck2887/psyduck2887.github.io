@@ -20,7 +20,8 @@ meta(content="telephone=no", name="format-detection")
 meta#site_data_static(data-url=url_for("/"))
 
 meta(name="renderer", content="webkit")
-link(rel="shortcut icon", type="image/x-icon", href=url_for(theme.favicon))
+link(rel="icon", type="image/webp", href=url_for(theme.favicon))
+link(rel="apple-touch-icon", href=url_for(theme.favicon))
 
 link(rel="stylesheet", href=url_for("js_complied/bundle.css"))
 link(rel="stylesheet", href=url_for("css/font-awesome.min.css"))

@@ -958,7 +958,8 @@ table tbody > tr:nth-child(odd) > th {
     margin-top: 0;
   }
   .sidebar .logo-title .title img {
-    width: 100px;
+    width: 120px;
+    height: 120px;
   }
   .sidebar .logo-title .title h3 {
     font-size: 20px;
@@ -1534,7 +1535,7 @@ a.btn {
     /* position: absolute; */
   }
   .footer {
-    display: none;
+    display: block;
   }
   .tocmenu {
     border-bottom: 1px solid var(--primary-100);
@@ -2783,8 +2784,8 @@ a:active {
 }
 .sidebar .logo-title .title img {
   display: block;
-  width: 112px;
-  height: 112px;
+  width: 168px;
+  height: 168px;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -3253,8 +3254,8 @@ table tbody > tr:nth-child(odd) > th {
     font-size: 27px;
   }
   .sidebar .logo-title .title img {
-    width: 112px;
-    height: 112px;
+    width: 120px;
+    height: 120px;
   }
   .sidebar .logo-title .description {
     max-width: 320px;

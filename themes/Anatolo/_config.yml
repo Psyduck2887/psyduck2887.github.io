@@ -6,7 +6,7 @@ defaultTheme: light
 favicon: /images/duck-logo.webp
 avatar: /images/logo.webp
 logo_dir: /images/duck-logo.webp
-logo_style: width:168px;
+logo_style:
 
 copyright:
   show: false

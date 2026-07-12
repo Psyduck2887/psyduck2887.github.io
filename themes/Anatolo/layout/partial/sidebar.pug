@@ -6,7 +6,7 @@ include toc
     .logo-title
       .title
         a.logo-link(href="/", title=__("home") || "Home")
-          img(src=url_for(theme.logo_dir), style=theme.logo_style, alt="favicon")
+          img(src=url_for(theme.logo_dir), alt=config.title + " logo")
         h3(title="")
           a(href="/")= config.title
         if theme.description
