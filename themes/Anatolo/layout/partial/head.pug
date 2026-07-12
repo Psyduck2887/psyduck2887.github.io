@@ -23,10 +23,10 @@ meta(name="renderer", content="webkit")
 link(rel="icon", type="image/webp", href=url_for(theme.favicon))
 link(rel="apple-touch-icon", href=url_for(theme.favicon))
 
-link(rel="stylesheet", href=url_for("js_complied/bundle.css"))
+link(rel="stylesheet", href=url_for("js_complied/bundle.css") + "?v=" + asset_version("js_complied/bundle.css"))
 link(rel="stylesheet", href=url_for("css/font-awesome.min.css"))
 
-script(src=url_for("js_complied/bundle.js"))
+script(src=url_for("js_complied/bundle.js") + "?v=" + asset_version("js_complied/bundle.js"))
 if theme.Baidutongji
   script(src=url_for("js/baidu-tongji.js"))
 

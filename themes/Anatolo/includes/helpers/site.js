@@ -69,4 +69,24 @@ module.exports = function (hexo) {
   hexo.extend.helper.register('md5', function (data) {
     return crypto.createHash('md5').update(data).digest('hex');
   });
+
+  /**
+   * Get a cache-busting version tag for a theme asset file.
+   * Returns the file's mtime (ms) so the value only changes when the
+   * rebuilt bundle actually changes. Falls back to a static value when
+   * the file cannot be read.
+   * @example <%- asset_version('js_complied/bundle.css') %>
+   */
+  hexo.extend.helper.register('asset_version', function (relPath) {
+    const fs = require('fs');
+    const path = require('path');
+    const themeDir = hexo.theme_dir || (hexo.base_dir && path.join(hexo.base_dir, 'themes', 'Anatolo')) || '';
+    // url_for 解析的是主题 source 目录下的资源，物理路径需补 source/
+    const resolved = path.join(themeDir, 'source', relPath);
+    try {
+      return fs.statSync(resolved).mtimeMs.toString();
+    } catch (_e) {
+      return '1';
+    }
+  });
 };

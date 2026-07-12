@@ -24,7 +24,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --omit=dev
-      - run: npx hexo generate
+      - name: Install theme dev dependencies (for bundle rebuild)
+        working-directory: themes/Anatolo
+        run: npm ci --include=dev
+      - name: Generate site (rebuild theme bundle from source)
+        env:
+          ANATOLO_BUILD_ASSETS: '1'
+        run: npx hexo generate
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ./public

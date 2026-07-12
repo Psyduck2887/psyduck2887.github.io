@@ -7,8 +7,8 @@
 }
 
 .content > .post > .post-content > p {
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 #ds-thread,
