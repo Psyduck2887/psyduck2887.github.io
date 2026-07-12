@@ -9,9 +9,6 @@
 
   .sidebar-tools
     .nav_right_btn
-      if theme.rightbtn.back && is_post()
-        li.btn-go-back
-          a.fa.fa-chevron-left(onclick="window.history.go(-1)", title="Back")
       if theme.rightbtn.search
         li.btn-search
           a.fa.fa-search(onclick="Anatolo.search.openWindow();", title="Search")

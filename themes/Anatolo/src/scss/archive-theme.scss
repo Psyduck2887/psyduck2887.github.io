@@ -252,6 +252,41 @@ a:active {
   backdrop-filter: none;
 }
 
+// 内容区左上角返回键：仅文章页显示，固定定位、放大、带图标与文字。
+.content-back {
+  position: fixed;
+  top: 24px;
+  left: calc(#{$sidebar-width} + 32px);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-family: var(--ui-font);
+  color: var(--text-muted);
+  background: var(--sidebar-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  text-decoration: none;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+
+  i {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--border-strong);
+    background: var(--surface-soft);
+  }
+}
+
 .post {
   position: relative;
   margin-bottom: 30px;
@@ -604,6 +639,13 @@ table tbody > tr:nth-child(odd) > th {
 
   .content {
     padding-top: 32px;
+  }
+
+  .content-back {
+    top: 12px;
+    left: 16px;
+    padding: 6px 12px;
+    font-size: 14px;
   }
 
   .post {

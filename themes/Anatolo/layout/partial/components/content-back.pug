@@ -1,0 +1,8 @@
+if theme.rightbtn.back && is_post()
+  a.content-back(
+    href="/",
+    onclick="if(window.history.length>1){window.history.go(-1);return false;}return true;",
+    title=__("back") || "Back"
+  )
+    i.fa.fa-arrow-left
+    span= __("back") || "Back"
