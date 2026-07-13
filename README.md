@@ -150,6 +150,8 @@ git push
    git push
    ```
 
+稍长、结构稍复杂的文章：以 [`docs/long-form-writing.md`](docs/long-form-writing.md) 为准；范文见 `source/_posts/agent-automation.md`（《Agent？自动化？》）。范文不在时只按书写规则即可。
+
 ### 修改站点配置
 
 编辑 `_config.yml` → `npx hexo server` 预览 → 确认后 `git push`。
