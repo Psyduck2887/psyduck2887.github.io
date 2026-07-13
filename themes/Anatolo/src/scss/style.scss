@@ -4,9 +4,11 @@
 .content {
   height: auto;
   float: right;
-  width: calc(100% - $sidebar-width);
+  width: calc(100% - #{$sidebar-width});
   margin-top: 0;
-  padding: 54px 0 80px;
+  /* Inset cards from the sidebar inside the content column (no outer gutter strip). */
+  padding: 54px 16px 80px 20px;
+  box-sizing: border-box;
 }
 
 @import 'animation.scss';
