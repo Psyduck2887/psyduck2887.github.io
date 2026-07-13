@@ -38,10 +38,12 @@
   --paper-deep: #202823;
   --label: #9caa9c;
   --logo-filter: none;
-  --sidebar-glass: rgba(32, 42, 35, 0.86);
-  --content-glass: rgba(23, 29, 25, 0.16);
-  --panel-glass: rgba(32, 40, 35, 0.91);
-  --panel-shadow: rgba(0, 0, 0, 0.24);
+  --sidebar-glass: rgba(32, 42, 35, 0.48);
+  --content-glass: rgba(23, 29, 25, 0.1);
+  --panel-glass: rgba(36, 44, 39, 0.44);
+  --panel-shadow: rgba(0, 0, 0, 0.3);
+  --glass-border: rgba(220, 232, 219, 0.2);
+  --glass-highlight: rgba(255, 255, 255, 0.05);
 }
 
 @mixin lightTheme() {
@@ -66,10 +68,12 @@
   --paper-deep: #eef1e8;
   --label: #68766c;
   --logo-filter: none;
-  --sidebar-glass: rgba(232, 239, 228, 0.86);
-  --content-glass: rgba(247, 245, 237, 0.12);
-  --panel-glass: rgba(255, 253, 247, 0.91);
-  --panel-shadow: rgba(52, 67, 57, 0.12);
+  --sidebar-glass: rgba(240, 244, 236, 0.46);
+  --content-glass: rgba(247, 245, 237, 0.08);
+  --panel-glass: rgba(255, 253, 247, 0.48);
+  --panel-shadow: rgba(52, 67, 57, 0.16);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.32);
 }
 
 html[theme='default'] {
