@@ -12,17 +12,25 @@ mixin make_post(item, is_detail)
     else
       //- List card: first body image → title + 16:9 cover only; else keep text summary.
       - var coverSrc = null;
-      - var htmlForCover = String(item.content || '');
-      - var coverFromHtml = htmlForCover.match(/<img[^>]+src=["']([^"']+)["']/i);
-      - if (coverFromHtml) coverSrc = coverFromHtml[1];
+      //- Prefer full markdown so a `<!-- more -->` before the image does not hide the cover.
+      - var mdForCover = String(item._content || item.raw || '');
+      - var coverFromMd = mdForCover.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/);
+      - if (coverFromMd) coverSrc = coverFromMd[1];
       - if (!coverSrc)
-        - var mdForCover = String(item._content || item.raw || '');
-        - var coverFromMd = mdForCover.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/);
-        - if (coverFromMd) coverSrc = coverFromMd[1];
+        - var htmlForCover = String(item.content || '');
+        - var coverFromHtml = htmlForCover.match(/<img[^>]+src=["']([^"']+)["']/i);
+        - if (coverFromHtml) coverSrc = coverFromHtml[1];
+      //- Absolute http(s)/protocol-relative URLs must not go through url_for.
+      - var coverHref = null;
+      - if (coverSrc)
+        - if (/^(https?:)?\/\//i.test(coverSrc) || /^data:/i.test(coverSrc))
+          - coverHref = coverSrc;
+        - else
+          - coverHref = url_for(coverSrc);
       .post-content
-        if coverSrc
+        if coverHref
           a.post-cover(href=url_for(item.path), title=item.title)
-            img(src=url_for(coverSrc), alt=item.title, loading="lazy")
+            img(src=coverHref, alt=item.title, loading="lazy")
         else if theme.useSummary
           if item.summary
             p!= item.summary
