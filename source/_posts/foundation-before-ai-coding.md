@@ -9,6 +9,8 @@ tags:
   - 可持续迭代
 ---
 
+![先搭好地基，再 AI Coding](/images/foundation-before-ai-coding-header.png)
+
 ## 先说结论
 
 要先搭好 **可持续迭代** 的地基，再谈 AI Coding。  
