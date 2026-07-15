@@ -373,6 +373,30 @@ a:active {
       text-decoration-thickness: 1px;
       text-underline-offset: 0.18em;
     }
+
+    /* List-only cover: fixed 16:9 crop, full width of card content */
+    .post-cover {
+      display: block;
+      margin: 0 0 4px;
+      overflow: hidden;
+      border-radius: calc(var(--radius-lg) - 6px);
+      aspect-ratio: 16 / 9;
+      background: var(--surface-soft);
+      text-decoration: none;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.02);
+      }
+    }
   }
 
   .post-footer {

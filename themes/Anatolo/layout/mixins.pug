@@ -10,8 +10,20 @@ mixin make_post(item, is_detail)
       .post-content
         p!= item.content
     else
+      //- List card: first body image → title + 16:9 cover only; else keep text summary.
+      - var coverSrc = null;
+      - var htmlForCover = String(item.content || '');
+      - var coverFromHtml = htmlForCover.match(/<img[^>]+src=["']([^"']+)["']/i);
+      - if (coverFromHtml) coverSrc = coverFromHtml[1];
+      - if (!coverSrc)
+        - var mdForCover = String(item._content || item.raw || '');
+        - var coverFromMd = mdForCover.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/);
+        - if (coverFromMd) coverSrc = coverFromMd[1];
       .post-content
-        if theme.useSummary
+        if coverSrc
+          a.post-cover(href=url_for(item.path), title=item.title)
+            img(src=url_for(coverSrc), alt=item.title, loading="lazy")
+        else if theme.useSummary
           if item.summary
             p!= item.summary
           else
@@ -23,7 +35,6 @@ mixin make_post(item, is_detail)
               p!= item.excerpt
             else
               p!= item.summary || item.content
-        //- 修改了显示缩略的选项
     .post-footer
       if is_detail
         if (item.copyright || theme.copyright.show) && item.copyright !== 'disabled'
