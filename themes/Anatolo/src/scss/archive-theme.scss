@@ -538,7 +538,9 @@ table tt {
     padding: 10px 0;
     border-top: 1px solid var(--border-subtle);
 
-    a {
+    a,
+    a:link,
+    a:visited {
       color: var(--text-main);
       font-family: var(--editorial-serif);
       font-size: 19px;
@@ -549,9 +551,15 @@ table tt {
     }
 
     .post-time {
-      color: var(--label);
-      font-family: var(--editorial-mono);
-      font-size: 10px;
+      flex: 0 0 auto;
+      min-width: 4.5em;
+      margin-left: 16px;
+      color: var(--text-main);
+      font-family: var(--editorial-serif);
+      font-size: 19px;
+      line-height: 1.3;
+      text-align: right;
+      white-space: nowrap;
     }
   }
 }
@@ -565,12 +573,48 @@ table tt {
   border-radius: var(--radius-sm);
 }
 
+/* Tags keep chip layout; match archive text color, slightly larger type. */
+a.tag_btn,
+a.tag_btn:link,
+a.tag_btn:visited,
 .tag_btn {
   color: var(--text-main);
+  font-family: var(--editorial-serif);
+  font-size: 16px;
+
+  &:hover {
+    color: var(--accent);
+  }
 
   .tag_count {
-    color: var(--accent-contrast);
-    background: var(--accent);
+    color: var(--text-muted);
+    background: var(--surface-soft);
+    font-family: var(--editorial-sans);
+    font-size: 0.75rem;
+  }
+}
+
+/* Hexo default category list (if used elsewhere): same readable ink. */
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .category-list-item {
+    padding: 10px 0;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  a.category-list-link,
+  a.category-list-link:link,
+  a.category-list-link:visited {
+    color: var(--text-main);
+    font-family: var(--editorial-serif);
+    font-size: 17px;
+
+    &:hover {
+      color: var(--accent);
+    }
   }
 }
 

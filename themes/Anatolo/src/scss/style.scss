@@ -302,16 +302,23 @@
     .listing-post {
       padding-bottom: 5px;
       display: flex;
+      align-items: baseline;
 
       .post-time {
-        flex: 0 0 50px;
-        float: right;
+        flex: 0 0 auto;
+        min-width: 4.5em;
+        margin-left: 16px;
+        float: none;
         color: var(--secondary-800);
+        font-size: 19px;
+        text-align: right;
+        white-space: nowrap;
         transition: color 0.8s;
       }
 
       a {
-        flex: 1 1 100%;
+        flex: 1 1 auto;
+        min-width: 0;
         color: var(--secondary-550);
 
         &:hover {

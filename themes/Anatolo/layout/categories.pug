@@ -8,6 +8,14 @@ block description
   meta(name="description", content=desc)
 
 block content
-  .archive
-    .autopagerize_page_element: .content
-      p!= list_categories(site.categories, { show_count: false })
+  .autopagerize_page_element: .content
+    .archive
+      ul.list-with-title
+        .listing-title= __("Categories")
+        ul.listing
+          each cat in site.categories.sort('name').toArray()
+            li.listing-item
+              .listing-post
+                a(href=url_for(cat.path), title=cat.name)= cat.name
+                .post-time
+                  span.date= cat.length

@@ -31,9 +31,9 @@ social:
 
 menu:
   首页: /
-  归档: /archives
   分类: /categories
   标签: /tags
+  历史: /archives
 
 rightbtn:
   back: true
