@@ -159,6 +159,10 @@
     }
   }
 
+  /* Mobile: the desktop side column becomes a compact two-row header —
+     logo + site name (tools pinned right), nav links in a single row.
+     Sidebar-only furniture (labels, description, socials, copyright) hides;
+     copyright reappears in .mobile-footer at the page bottom. */
   @media screen and (max-width: $bp-mobile-view) {
     width: 100%;
     height: auto;
@@ -170,27 +174,44 @@
 
     .logo-title {
       margin-top: 0;
-      padding: 28px 24px 18px;
+      padding: 12px 96px 8px 16px;
+      text-align: left;
+
+      &::before {
+        display: none;
+      }
 
       .title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+
         img {
-          width: 120px;
-          height: 120px;
+          width: 30px;
+          height: 30px;
+          margin: 0;
         }
 
         h3 {
-          font-size: 27px;
+          margin: 0;
+          font-size: 17px;
+          line-height: 1.2;
           overflow-wrap: anywhere;
         }
       }
 
       .description {
-        max-width: 320px;
+        display: none;
       }
     }
 
     .social-links {
-      margin: 0 auto 22px;
+      display: none;
+    }
+
+    .footer {
+      display: none;
     }
   }
 }
@@ -308,20 +329,52 @@
   }
 
   @media screen and (max-width: $bp-mobile-view) {
-    margin: 0 24px;
-    padding: 16px 0;
+    margin: 0 12px;
+    padding: 0 0 10px;
+    border-bottom: 0;
+
+    &::before {
+      display: none;
+    }
 
     .nav {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 18px;
+      display: flex;
+      gap: 2px;
 
       li {
         margin: 0;
+        border-top: 0;
+
+        &:last-child {
+          border-bottom: 0;
+        }
       }
 
-      li:nth-child(2) {
-        border-top: 1px solid var(--border-subtle);
+      a {
+        min-height: 34px;
+        padding: 0 12px;
+        font-size: 14px;
+      }
+    }
+
+    /* Search / theme toggle pinned to the header's top-right corner. */
+    .sidebar-tools {
+      position: absolute;
+      top: 11px;
+      right: 12px;
+      margin-top: 0;
+
+      &::before {
+        display: none;
+      }
+
+      .nav_right_btn {
+        gap: 8px;
+
+        a {
+          width: 34px;
+          height: 34px;
+        }
       }
     }
   }

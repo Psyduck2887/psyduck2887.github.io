@@ -70,6 +70,11 @@
   width: 100%;
 }
 
+// Shown on mobile only, replacing the sidebar footer that hides there.
+.mobile-footer {
+  display: none;
+}
+
 @media screen and (max-width: $bp-mobile-view) {
   .ambient-background {
     filter: blur(8px) saturate(110%) contrast(103%);
@@ -86,5 +91,15 @@
     left: 16px;
     padding: 6px 12px;
     font-size: 14px;
+  }
+
+  .mobile-footer {
+    display: block;
+    padding: 0 16px 26px;
+    color: var(--label);
+    font-family: var(--mono-font-face);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-align: center;
   }
 }
