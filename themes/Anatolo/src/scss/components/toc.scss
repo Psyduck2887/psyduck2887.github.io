@@ -1,0 +1,105 @@
+@import '../consts/consts.scss';
+
+ol.toclist-child {
+  padding-inline-start: 15px;
+}
+
+.tocmenu {
+  align-items: center;
+  border-top: 1px solid var(--primary-100);
+  text-align: center;
+  font-size: 13px;
+  margin: 0 auto;
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+
+.toclist-container {
+  overflow-y: auto;
+  max-height: calc(100vh - 600px);
+
+  &::-webkit-scrollbar-thumb {
+    color: #4786d6;
+    background-color: #4786d6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    color: #4786d6;
+    height: auto;
+  }
+}
+
+.toclist {
+  border-top: none;
+  padding: 0px 30px;
+  display: inline-block;
+  text-align: left;
+}
+
+.in-page.toc-container {
+  display: none;
+}
+
+@media screen and (max-width: $bp-mobile-view) {
+  .tocmenu {
+    border-bottom: 1px solid var(--primary-100);
+    position: relative;
+    text-align: left;
+  }
+
+  .toc-mobile {
+    .toc-button {
+      position: fixed;
+      z-index: 900;
+      background: #4786d6;
+      color: var(--secondary);
+      padding: 8px 15px;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover {
+      .in-page.toc-container {
+        right: 0;
+      }
+    }
+  }
+
+  .toclist-container {
+    height: auto;
+    max-height: calc(100vh - 110px);
+  }
+
+  .in-sidebar.toc-container {
+    display: none;
+  }
+
+  .in-page.toc-container {
+    display: block;
+    border-left: 1px solid var(--primary-100);
+    position: fixed;
+    bottom: 0px;
+    right: -300px;
+    width: 300px;
+    transition: all 0.4s;
+    background-color: var(--secondary);
+    z-index: 999;
+
+    .toc-toggle summary {
+      background: #4786d6;
+      transition: color 0.8s;
+      color: var(--secondary);
+      padding: 5px 10px;
+    }
+
+    .toc-toggle[open] summary {
+      color: #4786d6;
+      transition: background-color 0.8s;
+      background: var(--secondary);
+      padding: 4px;
+      text-align: center;
+    }
+  }
+}

@@ -228,7 +228,7 @@ export class AnatoloSearch extends Component {
   }
 
   async getSearchResult(keyword: string) {
-    await this.fuse_ok.unitl(true);
+    await this.fuse_ok.until(true);
     const data = await this.searchData.data();
 
     const searched = <T extends keyof SearchResource>(t: T) => {

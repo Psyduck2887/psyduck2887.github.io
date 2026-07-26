@@ -13,7 +13,7 @@ export class AnatoloDynamicResource<T> {
     });
   }
   async data() {
-    await this.loaded.unitl(true);
+    await this.loaded.until(true);
     return this.__data as T;
   }
 }

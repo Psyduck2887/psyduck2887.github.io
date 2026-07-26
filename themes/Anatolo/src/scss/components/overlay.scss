@@ -1,0 +1,82 @@
+// Floating action button (scroll to top).
+.float-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  color: var(--text-main);
+  background-color: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+
+    i {
+      color: var(--accent-contrast);
+    }
+  }
+
+  &.hide {
+    transform: translateX(100px);
+  }
+
+  i {
+    font-size: 200%;
+    color: var(--primary-500);
+  }
+
+  &#scroll-to-top {
+    bottom: 50px;
+  }
+}
+
+// Full-screen dimmed cover for search box and copy indicator.
+.modal-cover {
+  display: none;
+  perspective: 50em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(27, 24, 20, 0.78);
+  transform-origin: 0%;
+  perspective-origin: top center;
+}
+
+.modal-cover.show {
+  display: block;
+}
+
+.modal-cover,
+.modal-cover .modal-container {
+  position: fixed;
+  overflow: hidden;
+}
+
+.modal-cover .modal-container {
+  left: 50%;
+  z-index: 101;
+}
+
+// "copied" checkmark indicator.
+.indicator {
+  top: 50vh;
+  transform: translate(-35px, -35px);
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-sm);
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 300%;
+    color: var(--primary-800);
+  }
+}

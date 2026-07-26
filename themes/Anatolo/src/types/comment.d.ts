@@ -11,15 +11,6 @@ interface ValineConfig {
   avatar: string;
 }
 
-interface GitmentConfig {
-  enable: boolean;
-  owner: string;
-  repo: string;
-  client_id: string;
-  client_secret: string;
-  id: string;
-}
-
 interface GitalkConfig {
   enable: boolean;
   owner: string;
@@ -31,6 +22,6 @@ interface GitalkConfig {
 
 export interface CommentConfig {
   valine?: ValineConfig;
-  gitment?: GitmentConfig;
   gitalk?: GitalkConfig;
+  disqus?: string;
 }

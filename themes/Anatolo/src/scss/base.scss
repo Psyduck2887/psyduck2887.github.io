@@ -1,20 +1,20 @@
+@charset 'UTF-8';
+
+// Global design tokens (colors live in color-defination.scss).
 :root {
   --mono-font-face: 'mononoki', 'Consolas', 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', 'courier',
     monospace;
   --reading-font: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Songti SC', 'Noto Serif CJK SC', Georgia, serif;
   --ui-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  --reading-measure: 38rem;
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
 }
 
-.content > .post > .post-content > p {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-#ds-thread,
-#disqus_thread,
-#cloud-tie-wrapper {
-  margin: 0 30px !important;
+::selection {
+  color: var(--accent-contrast);
+  background: var(--accent);
 }
 
 html {
@@ -26,29 +26,20 @@ html {
 }
 
 body {
+  width: 100%;
+  margin: 0 auto 30px;
   padding: 0;
-  margin: 0;
-  line-height: 1.7;
   color: var(--text-main);
+  // The animated ambient canvas behind everything is the real background.
+  background: transparent;
   font-family: var(--ui-font);
   font-size: 16px;
-  width: 100%;
-  margin: 0 auto 30px auto;
-  background:
-    radial-gradient(circle at 70% 0%, rgba(88, 166, 255, 0.06), transparent 34%),
-    var(--secondary);
+  line-height: 1.7;
+  counter-reset: archive-entry;
   transition:
-    background-color 0.8s,
-    color 0.8s;
-}
-
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 h1,
@@ -107,10 +98,6 @@ ol ul {
   margin: 0.4em 0;
 }
 
-ol.toclist-child {
-  padding-inline-start: 15px;
-}
-
 ul p,
 ol p,
 li p,
@@ -128,9 +115,10 @@ a img {
 }
 
 p {
-  line-height: 1.85;
+  color: var(--text-main);
+  font-size: 15px;
   font-weight: 400;
-  font-size: 16px;
+  line-height: 1.9;
 }
 
 a {
@@ -140,10 +128,6 @@ a {
 a:link,
 a:visited {
   opacity: 1;
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  -ms-transition: all 0.15s linear;
   transition: all 0.15s linear;
   color: var(--accent);
 }
@@ -176,17 +160,23 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid var(--primary-100);
+  border-top: 1px solid var(--border-subtle);
   margin: 3.2em 0;
   padding: 0;
 }
 
 blockquote {
   box-sizing: border-box;
-  margin: 1.6em 0 1.6em 0em;
-  padding: 0 0 0 1.6em;
-  border-left: #f66 0.3em solid;
-  background-color: cssrgba(var(--primary-rgb), 0.03);
+  margin: 2em 0;
+  padding: 24px 28px;
+  color: var(--accent-contrast);
+  border: 0;
+  background: var(--accent);
+
+  p,
+  a {
+    color: inherit;
+  }
 
   p {
     margin: 0.8em 0;
@@ -217,24 +207,24 @@ mark {
   background-color: #ffc336;
 }
 
+// Code always sits on a dark warm panel, independent of the light/dark theme.
 code,
 tt {
   padding: 1px 3px;
   font-family: var(--mono-font-face);
   white-space: pre-wrap;
-  background-color: var(--secondary-950);
-  transition:
-    background-color 0.8s,
-    border 0.8s;
-  color: var(--primary-700);
-  border-radius: 3px;
+  color: #e9e0d1;
+  background: #211f1b;
+  border: 1px solid #494238;
+  border-radius: var(--radius-xs);
 }
 
 pre {
   font-size: 15px;
-  background-color: var(--secondary-950) !important;
-  font-family: var(--mono-font-face) !important;
-  color: var(--primary-700) !important;
+  font-family: var(--mono-font-face);
+  color: #e9e0d1;
+  background: #211f1b;
+  border-radius: var(--radius-xs);
 }
 
 kbd {
@@ -252,27 +242,25 @@ kbd {
     0 1px 0 0 white inset;
 }
 
+// Plain paper tables: theme-aware backgrounds, light borders, no color bands.
 table {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1em 0;
   width: 100%;
   max-width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  background-color: transparent;
+  background: var(--table-bg);
+  border: 1px solid var(--border-subtle);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 table,
 table tr,
 table tr td,
 table tr th {
-  border-color: transparent;
-}
-
-table th {
-  color: var(--primary-700);
-  background-color: rgba(63, 185, 237, 0.15);
+  border-color: var(--border-subtle);
 }
 
 tr th {
@@ -282,9 +270,13 @@ tr th {
 
 tr th,
 tr td {
-  padding: 5px 20px;
+  padding: 10px 14px;
   border-right: 1px solid;
-  font-size: 1rem;
+  font-size: 16px;
+  font-family: var(--ui-font);
+  line-height: 1.7;
+  color: var(--text-main);
+  vertical-align: top;
 }
 
 tr th:last-child,
@@ -293,12 +285,27 @@ tr td:last-child {
 }
 
 table th {
-  font-weight: bold;
+  color: var(--text-strong);
+  background: var(--table-head-bg);
+  font-family: var(--ui-font);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-  background-color: var(--secondary-950);
+  background: var(--table-bg);
+}
+
+table tbody > tr:nth-child(even) > td,
+table tbody > tr:nth-child(even) > th {
+  background: var(--table-bg-alt);
+}
+
+table code,
+table tt {
+  font-size: 0.92em;
 }
 
 .gist {

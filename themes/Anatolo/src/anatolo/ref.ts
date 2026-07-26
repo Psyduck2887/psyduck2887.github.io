@@ -48,12 +48,12 @@ export class AnatoloRef<T> {
     return false;
   }
   /** until value in vals */
-  async unitl(...vals: T[]) {
+  async until(...vals: T[]) {
     while (!this._checkin(vals)) await this.nextVal();
     return this.value;
   }
   /** until value not in vals */
-  async unitlNot(...vals: T[]) {
+  async untilNot(...vals: T[]) {
     while (this._checkin(vals)) await this.nextVal();
     return this.value;
   }

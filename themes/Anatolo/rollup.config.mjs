@@ -28,15 +28,9 @@ export default defineConfig([
       }),
       sass({
         output(_styles, styleNodes) {
-          const orderedStyles = [...styleNodes].sort((left, right) => {
-            const leftIsArchiveTheme = left.id.endsWith('archive-theme.scss');
-            const rightIsArchiveTheme = right.id.endsWith('archive-theme.scss');
-            return Number(leftIsArchiveTheme) - Number(rightIsArchiveTheme);
-          });
-
           writeFileSync(
             resolvePath(import.meta.dirname || '.', 'source/js_complied/bundle.css'),
-            orderedStyles.map(({ content }) => content).join('\n'),
+            styleNodes.map(({ content }) => content).join('\n'),
           );
         },
       }),
