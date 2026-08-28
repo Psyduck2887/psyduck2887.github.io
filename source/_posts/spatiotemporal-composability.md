@@ -1,5 +1,5 @@
 ---
-title: 读《A Programming Paradigm for Spatiotemporal Composability》
+title: 读 DeepSeek Harness 背后的《A Programming Paradigm for Spatiotemporal Composability》
 date: 2026-08-14 09:30:00
 categories:
   - 技术
@@ -9,6 +9,8 @@ tags:
   - 软件架构
   - 论文阅读
 ---
+
+![DeepSeek Harness 的插件化架构](/images/deepseek-harness-spatiotemporal-header.png)
 
 最近读了一篇论文：《[A Programming Paradigm for Spatiotemporal Composability](https://cdn3.ldstatic.com/original/4X/2/e/c/2ecb0fdfdf101157313893fea401e5d4dcae2fe8.pdf)》。
 
