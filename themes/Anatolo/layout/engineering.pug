@@ -1,0 +1,149 @@
+extends partial/layout
+
+block site_title
+  != page.title + " · " + config.title
+
+block description
+  meta(name="description", content="工作项目、个人项目与架构探索")
+  meta(name="robots", content="noindex,nofollow")
+  link(rel="stylesheet", href=url_for("css/engineering.css") + "?v=" + asset_version("css/engineering.css"))
+  script(src=url_for("js/engineering.js") + "?v=" + asset_version("js/engineering.js"), defer)
+
+block content
+  .autopagerize_page_element
+    .content.engineering-shell
+      .engineering-page
+        aside.engineering-access
+          a.engineering-home-link(href="/", data-native-navigation="true") ← 返回博客主页
+          p.engineering-home-note 隐私提示：主站未设置返回入口。再次访问请重新输入网址，或使用浏览器后退。
+
+        header.engineering-hero
+          .engineering-kicker ENGINEERING / SELECTED WORK
+          h1 工程实践
+          p.engineering-lead 这里整理了近期完成或持续实践的工程项目，主要涉及 Agent、自动化、MCP、AI Coding 与软件工程方法。
+
+        section.engineering-section
+          .engineering-section-header
+            div
+              .engineering-label 01 / WORK PROJECTS
+              h2 工作项目
+              p 来自真实研发场景的 Agent 落地经验，内容已做必要脱敏。
+            .engineering-controls(aria-label="工作项目卡片导航")
+              .engineering-scroll-actions
+                button.engineering-scroll-button.engineering-scroll-prev(type="button", aria-label="向左浏览工作项目") ←
+                button.engineering-scroll-button.engineering-scroll-next(type="button", aria-label="向右浏览工作项目") →
+
+          .engineering-card-track
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/workflow-mock/", data-native-navigation="true")
+                span.engineering-status 可本地演示
+                img(src="/images/workflow-mock-header.png", alt="Agent 驱动的版本测试全流程", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta LangGraph · Docker · SOC
+                h3: a(href="/engineering/workflow-mock/", data-native-navigation="true") Agent 驱动的版本测试全流程
+                p 用五个 Docker 实例离线复现版本发现、初始化编译、Jira 任务、SOC 执行和通知闭环。
+                a.engineering-read-link(href="/engineering/workflow-mock/", data-native-navigation="true") 查看工作项目 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/long-log-analysis/", data-native-navigation="true")
+                span.engineering-status 工作项目
+                img(src="/images/long-log-analysis-header.png", alt="面向 Agent 工作流的长日志分析系统", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Pi SDK · 变点检测 · 日志模板
+                h3: a(href="/engineering/long-log-analysis/", data-native-navigation="true") 面向 Agent 工作流的长日志分析系统
+                p 通过算法预处理压缩长日志，再由 Agent 完成异常归纳、原始行定位和提单数据生成。
+                a.engineering-read-link(href="/engineering/long-log-analysis/", data-native-navigation="true") 查看工作项目 →
+
+        section.engineering-section
+          .engineering-section-header
+            div
+              .engineering-label 02 / PERSONAL PROJECTS
+              h2 个人项目
+              p 独立完成或长期维护的工具、助手与自动化工作流。
+            .engineering-controls(aria-label="个人项目卡片导航")
+              .engineering-scroll-actions
+                button.engineering-scroll-button.engineering-scroll-prev(type="button", aria-label="向左浏览个人项目") ←
+                button.engineering-scroll-button.engineering-scroll-next(type="button", aria-label="向右浏览个人项目") →
+
+          .engineering-card-track
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/job-search-agent/", data-native-navigation="true")
+                span.engineering-status 持续迭代
+                img(src="/images/ai-job-search-four-workflows-header.png", alt="AI 求职工程的四条工作流", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Agent · 工作流 · BOSS
+                h3: a(href="/engineering/job-search-agent/", data-native-navigation="true") AI 求职工程
+                p 从职位搜索、简历模板到定向简历生成，前三条工作流已经完成实际交付。
+                a.engineering-read-link(href="/engineering/job-search-agent/", data-native-navigation="true") 查看个人项目 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/feishu-agent/", data-native-navigation="true")
+                span.engineering-status 持续使用中
+                .engineering-image-placeholder FEISHU / PI AGENT
+              .engineering-card-body
+                .engineering-card-meta 飞书 · Agent · 沙箱
+                h3: a(href="/engineering/feishu-agent/", data-native-navigation="true") 飞书私聊 Agent 助手
+                p 一个已运行数月的私聊助手，用工具层约束工作区、路径和 Bash 执行边界。
+                a.engineering-read-link(href="/engineering/feishu-agent/", data-native-navigation="true") 查看个人项目 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/duck-guard/", data-native-navigation="true")
+                span.engineering-status 已发布
+                img(src="/images/duck-guard-header.png", alt="Duck Guard 1.0", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Python · AI Coding · PyPI
+                h3: a(href="/engineering/duck-guard/", data-native-navigation="true") Duck Guard 1.0
+                p 为 AI Coding 提供本地文件快照和回滚能力，并配套可直接使用的 Agent Skill。
+                a.engineering-read-link(href="/engineering/duck-guard/", data-native-navigation="true") 查看个人项目 →
+
+        section.engineering-section.engineering-section-last
+          .engineering-section-header
+            div
+              .engineering-label 03 / ARCHITECTURE & EXPLORATION
+              h2 架构与探索
+              p 对软件架构、Agent 能力边界和新技术方向的研究与思考。
+            .engineering-controls(aria-label="架构与探索卡片导航")
+              .engineering-scroll-actions
+                button.engineering-scroll-button.engineering-scroll-prev(type="button", aria-label="向左浏览架构与探索") ←
+                button.engineering-scroll-button.engineering-scroll-next(type="button", aria-label="向右浏览架构与探索") →
+
+          .engineering-card-track
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/multi-agent-orchestration/", data-native-navigation="true")
+                span.engineering-status 方法总结
+                img(src="/images/practical-multi-agent-orchestration-header.png", alt="较为实用的 Multi-Agent 编排", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Multi-Agent · 解耦 · Worktree
+                h3: a(href="/engineering/multi-agent-orchestration/", data-native-navigation="true") 较为实用的 Multi-Agent 编排
+                p 围绕节点解耦、角色分工、协议设计和 Worktree 展开的 Coding 场景实践。
+                a.engineering-read-link(href="/engineering/multi-agent-orchestration/", data-native-navigation="true") 查看架构思考 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/code-agent-observability/", data-native-navigation="true")
+                span.engineering-status 方法总结
+                img(src="/images/code-agent-observability-header.png", alt="给 Agent 装上眼睛", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Code Agent · 可观测性 · 日志
+                h3: a(href="/engineering/code-agent-observability/", data-native-navigation="true") 给 Agent 装上眼睛
+                p 让 Agent 直接观察远程编译、开发板状态和日志，而不是依赖人工转述。
+                a.engineering-read-link(href="/engineering/code-agent-observability/", data-native-navigation="true") 查看架构思考 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/ai-coding-foundation/", data-native-navigation="true")
+                span.engineering-status 工程方法
+                img(src="/images/foundation-before-ai-coding-header.png", alt="先搭好地基，再 AI Coding", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta AI Coding · 测试 · 持续迭代
+                h3: a(href="/engineering/ai-coding-foundation/", data-native-navigation="true") 先搭好地基，再 AI Coding
+                p 用可构建、可测试、可观察的工程基础承接 Agent 的多轮自动迭代。
+                a.engineering-read-link(href="/engineering/ai-coding-foundation/", data-native-navigation="true") 查看架构思考 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/spatiotemporal-composability/", data-native-navigation="true")
+                span.engineering-status 论文阅读
+                img(src="/images/deepseek-harness-spatiotemporal-header.png", alt="DeepSeek Harness 的插件化架构", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta DeepSeek Harness · 动态组合
+                h3: a(href="/engineering/spatiotemporal-composability/", data-native-navigation="true") 时空可组合性
+                p 从组件启动、退出和依赖变化理解动态系统如何持续保持正确。
+                a.engineering-read-link(href="/engineering/spatiotemporal-composability/", data-native-navigation="true") 查看架构思考 →

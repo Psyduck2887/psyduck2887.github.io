@@ -116,7 +116,8 @@ async function queryPageData(link: string) {
 }
 
 function recoveryScrollY(scrollY?: number) {
-  const sidebarheight = document.getElementsByClassName('sidebar')[0].clientHeight - 40;
+  const sidebar = document.querySelector<HTMLElement>('.sidebar');
+  const sidebarheight = sidebar ? sidebar.clientHeight - 40 : 0;
   if (!scrollY) {
     if (window.innerWidth > 960) {
       window.scrollTo({
@@ -200,6 +201,7 @@ function makeLink() {
     let target = ev.target as HTMLAnchorElement;
     while (target) {
       if (target.onclick) return;
+      if (target.dataset?.nativeNavigation === 'true') return;
       if (isThisSite(target.href)) {
         ev.preventDefault();
         ev.stopPropagation();

@@ -1,0 +1,25 @@
+extends partial/layout
+
+block site_title
+  != page.title + " · Engineering"
+
+block description
+  - var desc = page.desc || strip_html(page.content).replace(/^\s*/, "").replace(/\s*$/, "").substring(0, 150);
+  meta(name="description", content=desc)
+  meta(name="robots", content="noindex,nofollow")
+  link(rel="stylesheet", href=url_for("css/engineering.css") + "?v=" + asset_version("css/engineering.css"))
+
+block content
+  .autopagerize_page_element
+    .content.engineering-article-shell
+      a.engineering-internal-back(href="/engineering/", data-native-navigation="true") ← 返回 Engineering
+      article.post.engineering-article
+        .engineering-article-label= page.engineering_category || "ENGINEERING"
+        .post-title
+          h3
+            a= page.title
+        if page.engineering_cover
+          figure.engineering-article-cover
+            img(src=page.engineering_cover, alt=page.title)
+        .post-content
+          != page.content

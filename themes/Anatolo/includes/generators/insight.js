@@ -35,7 +35,9 @@ module.exports = function (hexo) {
       };
     }
     const site = {
-      pages: locals.pages.map(postMapper),
+      pages: locals.pages
+        .filter((page) => !String(page.path || '').startsWith('engineering/'))
+        .map(postMapper),
       posts: locals.posts.map(postMapper),
       tags: locals.tags.map(tagMapper),
       categories: locals.categories.map(tagMapper),

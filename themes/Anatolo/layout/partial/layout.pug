@@ -5,16 +5,19 @@ html(lang="zh-CN", theme=theme.defaultTheme.replaceAll("-mode", ""))
 
   - var classList = [];
   - if (!config.highlight.line_number && !config.prismjs.line_number) { classList.push("disable-line-number"); }
+  - if (page.layout) { classList.push("page-" + page.layout); }
+  - var isEngineeringSpace = page.layout === "engineering" || page.layout === "engineering-post";
 
   body(class=classList.join(" "))
     main-outlet
-      include sidebar
+      if !isEngineeringSpace
+        include sidebar
       .main.animated.fadeInDown
         block content
     //- Mobile-only copyright line; the in-sidebar footer hides on small screens.
     .mobile-footer
       span= theme.footbar.copyright + " · Powered by Hexo"
-    if theme.rightbtn.search
+    if theme.rightbtn.search && !isEngineeringSpace
       include components/search
 
     include components/float-btn

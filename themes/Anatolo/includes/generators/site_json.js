@@ -120,11 +120,15 @@ function getPath(path) {
   }
 }
 
+function isEngineeringSpace(item) {
+  return Boolean(item && String(item['path'] || '').startsWith('engineering/'));
+}
+
 /** @param {import("hexo")} hexo */
 module.exports = function (hexo) {
   hexo.extend.generator.register('site_JSON', function (locals) {
     const site = {
-      pages: locals.pages.map(secondaryPostMapper),
+      pages: locals.pages.filter((page) => !isEngineeringSpace(page)).map(secondaryPostMapper),
       posts: locals.posts.map(secondaryPostMapper),
       tags: locals.tags.map(tagOrCategoryMapper),
       categories: locals.categories.map(tagOrCategoryMapper),
@@ -135,7 +139,7 @@ module.exports = function (hexo) {
     };
   });
   hexo.extend.generator.register('page_JSON', function (locals) {
-    const pages = locals.pages.map(pageMapper);
+    const pages = locals.pages.filter((page) => !isEngineeringSpace(page)).map(pageMapper);
     return pages.map((page) => {
       return {
         path: getPath(page.path),
