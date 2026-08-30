@@ -36,23 +36,33 @@ block content
           .engineering-card-track
             article.engineering-card
               a.engineering-card-image(href="/engineering/workflow-mock/", data-native-navigation="true")
-                span.engineering-status 可本地演示
-                img(src="/images/workflow-mock-header.png", alt="Agent 驱动的版本测试全流程", loading="lazy")
+                span.engineering-status 约 85% 自动化
+                img(src="/images/workflow-mock-header.png", alt="公司 Agent 自动化测试落地", loading="lazy")
               .engineering-card-body
-                .engineering-card-meta LangGraph · Docker · SOC
-                h3: a(href="/engineering/workflow-mock/", data-native-navigation="true") Agent 驱动的版本测试全流程
-                p 用五个 Docker 实例离线复现版本发现、初始化编译、Jira 任务、SOC 执行和通知闭环。
+                .engineering-card-meta Agent · Gerrit · LangGraph
+                h3: a(href="/engineering/workflow-mock/", data-native-navigation="true") 公司 Agent 自动化测试落地
+                p 从监测发版、分析改动和安排回归，到板端执行、日志分析与问题提单。
                 a.engineering-read-link(href="/engineering/workflow-mock/", data-native-navigation="true") 查看工作项目 →
 
             article.engineering-card
               a.engineering-card-image(href="/engineering/long-log-analysis/", data-native-navigation="true")
-                span.engineering-status 工作项目
-                img(src="/images/long-log-analysis-header.png", alt="面向 Agent 工作流的长日志分析系统", loading="lazy")
+                span.engineering-status 已实际使用
+                img(src="/images/long-log-analysis-header.png", alt="Agent 长日志分析", loading="lazy")
               .engineering-card-body
-                .engineering-card-meta Pi SDK · 变点检测 · 日志模板
-                h3: a(href="/engineering/long-log-analysis/", data-native-navigation="true") 面向 Agent 工作流的长日志分析系统
-                p 通过算法预处理压缩长日志，再由 Agent 完成异常归纳、原始行定位和提单数据生成。
+                .engineering-card-meta 变点检测 · Drain3 · Pi SDK
+                h3: a(href="/engineering/long-log-analysis/", data-native-navigation="true") Agent 长日志分析
+                p 根据日志特点选择不同算法，先压缩重复内容，再让 Agent 分析真正的异常。
                 a.engineering-read-link(href="/engineering/long-log-analysis/", data-native-navigation="true") 查看工作项目 →
+
+            article.engineering-card
+              a.engineering-card-image(href="/engineering/personal-test-automation/", data-native-navigation="true")
+                span.engineering-status 约 90% 自动化
+                img(src="/images/personal-test-automation-header.png", alt="个人测试工作自动化经历", loading="lazy")
+              .engineering-card-body
+                .engineering-card-meta Pi Agent · SOC · 自动恢复
+                h3: a(href="/engineering/personal-test-automation/", data-native-navigation="true") 个人测试工作自动化经历
+                p 自动准备版本、编译、烧录和执行测试，并在节点异常时唤醒 Agent 协助恢复。
+                a.engineering-read-link(href="/engineering/personal-test-automation/", data-native-navigation="true") 查看工作项目 →
 
         section.engineering-section
           .engineering-section-header

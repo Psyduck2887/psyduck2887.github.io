@@ -33,6 +33,10 @@ Markdown 内容位于 `source/`，Hexo 读取根目录 `_config.yml` 和 `themes
 - `themes/Anatolo/source/css/engineering.css`：工程精选页专用样式。
 - `themes/Anatolo/source/js/engineering.js`：横向卡片箭头交互。
 - `source/images/workflow-mock-header.png`：Workflow Mock 工作项目封面。
-- `source/images/long-log-analysis-header.png`：长日志分析工作项目封面。
+- `source/images/long-log-analysis-header.png`：Agent 长日志分析的布偶风封面。
+- `source/engineering/personal-test-automation/index.md`：个人测试工作流自动化文章。
+- `source/images/agent-testing-overview.svg`：公司 Agent 自动化测试整体流程、接入状态和本地模拟范围图。
+- `source/images/long-log-routing.png`、`long-log-pipeline.png`：Agent 长日志分析的布偶风分流图与处理流程图。
+- `source/images/personal-test-automation-header.png`：个人测试工作自动化经历的古希腊陶绘风封面。
 - `_config.yml`：Hexo 根配置。
 - `package.json`：构建和本地预览命令。

@@ -51,6 +51,9 @@ export class AnatoloSearch extends Component {
   }
 
   init() {
+    // Engineering 页面不渲染主站搜索框，初始化时直接跳过。
+    if (!this.mainEl) return;
+
     this.buildFuse();
 
     document.body.appendChild(this.mainEl);
