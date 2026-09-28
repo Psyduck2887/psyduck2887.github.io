@@ -38,5 +38,7 @@ Markdown 内容位于 `source/`，Hexo 读取根目录 `_config.yml` 和 `themes
 - `source/images/agent-testing-overview.svg`：公司 Agent 自动化测试整体流程、接入状态和本地模拟范围图。
 - `source/images/long-log-routing.png`、`long-log-pipeline.png`：Agent 长日志分析的布偶风分流图与处理流程图。
 - `source/images/personal-test-automation-header.png`：个人测试工作自动化经历的古希腊陶绘风封面。
+- `source/_posts/workflow-node-principles.md`、`source/engineering/workflow-node-principles/index.md`：工作流节点准入三原则，A／B 各一份独立维护。
+- `source/images/workflow-node-principles-header.png`：工作流节点准入三原则的复古铁路海报风封面。
 - `_config.yml`：Hexo 根配置。
 - `package.json`：构建和本地预览命令。
