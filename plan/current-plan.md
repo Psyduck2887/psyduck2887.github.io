@@ -24,12 +24,12 @@
 
 1. 放置游戏文件并配置 `skip_render`：已完成。
 2. 本地构建与浏览器实测（桌面、手机视口，进入战斗、无报错）：已完成。
-3. 提交并推送 `main`，等待 GitHub Actions 部署：进行中。
-4. 线上验证 `https://humpy.site/nightmend/`：待完成。
+3. 提交并推送 `main`，等待 GitHub Actions 部署：已完成（提交 `2ca4a4c`，Actions 构建与发布均成功）。
+4. 线上验证 `https://humpy.site/nightmend/`：已完成；线上文件与源文件逐字节一致，桌面与手机视口均进入战斗、无报错。
 
 ## 下一步
 
-推送后跟踪 Actions 运行结果，部署成功后在线上地址复测。
+本轮部署已完成。之后更新游戏时：在游戏项目里重新构建，覆盖 `source/nightmend/index.html`，本地构建确认后推送 `main`。
 
 ## 测试、Review、Commit 和交付门禁
 
