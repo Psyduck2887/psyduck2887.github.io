@@ -24,13 +24,6 @@ Markdown 内容位于 `source/`，Hexo 读取根目录 `_config.yml` 和 `themes
 - Engineering 文章可通过 `engineering_cover` 配置独立封面，同一图片复用于首页卡片和文章头图。
 - B 使用 `noindex,nofollow`，并从主站 `site.json`、`content.json` 和单页 JSON 生成中排除。
 
-## 已确认的小游戏页约定
-
-- 小游戏《补夜》的路径为 `/nightmend/`，文件是 `source/nightmend/index.html`。
-- 它是一个自带样式和脚本的单文件 HTML，由 `_config.yml` 的 `skip_render: nightmend/**` 原样复制到 `public/`，不经过主题渲染，也不进入站内搜索用的 JSON。
-- 游戏源码与构建在本机的 `~/Workspace/temp/nightmend/` 项目；更新时在那边构建出 `implement/nightmend/nightmend.html`，再覆盖本仓库的 `source/nightmend/index.html`。
-- 目前 A 与 B 都没有进入游戏的入口，直接访问网址。
-
 ## 重要文件
 
 - `source/_posts/`：博客文章。
@@ -47,6 +40,5 @@ Markdown 内容位于 `source/`，Hexo 读取根目录 `_config.yml` 和 `themes
 - `source/images/personal-test-automation-header.png`：个人测试工作自动化经历的古希腊陶绘风封面。
 - `source/_posts/workflow-node-principles.md`、`source/engineering/workflow-node-principles/index.md`：工作流节点准入三原则，A／B 各一份独立维护。
 - `source/images/workflow-node-principles-header.png`：工作流节点准入三原则的复古铁路海报风封面。
-- `source/nightmend/index.html`：小游戏《补夜》（单文件，原样发布到 `/nightmend/`）。
 - `_config.yml`：Hexo 根配置。
 - `package.json`：构建和本地预览命令。
