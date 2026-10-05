@@ -23,12 +23,12 @@
 
 1. 删除游戏文件、撤回 `skip_render` 配置、同步 `plan/struct.md`：已完成。
 2. 本地构建确认不再生成 `/nightmend/`：已完成。
-3. 提交推送 `main` 并确认 Actions 部署成功：进行中。
-4. 线上确认 `https://humpy.site/nightmend/` 返回 404、首页正常：待完成。
+3. 提交推送 `main` 并确认 Actions 部署成功：已完成（提交 `3e04e89`）。
+4. 线上确认 `https://humpy.site/nightmend/` 返回 404、首页正常：已完成。
 
 ## 下一步
 
-本地构建确认后提交推送，跟踪 Actions，并在线上确认。
+本轮下架已完成，无后续事项。
 
 ## 测试、Review、Commit 和交付门禁
 
