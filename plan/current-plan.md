@@ -22,14 +22,14 @@
 ## 阶段状态
 
 1. 放置游戏文件并配置 `skip_render`：已完成。
-2. 本地构建确认 `public/myturn/index.html` 与源文件一致：进行中。
-3. 提交并推送 `main`，等待 GitHub Actions 部署：待完成。
-4. 线上验证 `https://humpy.site/myturn/`：待完成。
+2. 本地构建确认 `public/myturn/index.html` 与源文件一致：已完成。
+3. 提交并推送 `main`，等待 GitHub Actions 部署：已完成（提交 `b1e9d48`）。
+4. 线上验证 `https://humpy.site/myturn/`：已完成（横屏视口进入对局，无报错、无失败请求）。
 5. 用户试玩后下架：待用户通知。
 
 ## 下一步
 
-本地构建，然后提交推送并跟踪 Actions。
+等用户试玩完通知下架：删除 `source/myturn/`、撤回 `skip_render` 那一行、同步两份计划文档，提交推送。
 
 ## 测试、Review、Commit 和交付门禁
 
