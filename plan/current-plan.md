@@ -1,15 +1,15 @@
 # 当前执行计划
 
-`current-plan.md` 是当前执行合同与进度记录，记录本轮从博客下架小游戏《补夜》的范围、状态和验收要求。
+`current-plan.md` 是当前执行合同与进度记录，记录本轮把小游戏《我的回合》临时部署到博客供用户试玩的范围、状态和验收要求。
 
 ## 当前目标和范围
 
-按用户要求，把 2026-10-05 上线的小游戏《补夜》从博客下架：删除 `source/nightmend/`，撤回 `_config.yml` 里对应的 `skip_render` 配置，`https://humpy.site/nightmend/` 不再可访问。不动文章、主题、导航与 Engineering。
+把单文件小游戏《我的回合》（横屏）部署到博客，线上地址 `https://humpy.site/myturn/`，供用户试玩，玩完再下架。只新增游戏页和一项 `skip_render` 配置，不改主题、文章、导航与 Engineering。
 
 ## 执行纪律
 
-- 用户已明确要求下架；本地构建确认后提交并推送 `main`，由 GitHub Actions 部署。
-- 只撤回上线时新增的内容，Git 历史保留，不改写。
+- 用户已明确要求直接部署到博客；本地构建与浏览器实测通过后提交并推送 `main`，由 GitHub Actions 部署。
+- 游戏文件只做原样复制，不在本仓库里修改游戏内容。
 
 ## 上下文恢复规则
 
@@ -17,23 +17,24 @@
 
 ## 计划变更规则
 
-如需重新上线或改用其它方式发布游戏，先询问用户。
+如需给博客加游戏入口、调整路径或改用其它方式发布，先询问用户。
 
 ## 阶段状态
 
-1. 删除游戏文件、撤回 `skip_render` 配置、同步 `plan/struct.md`：已完成。
-2. 本地构建确认不再生成 `/nightmend/`：已完成。
-3. 提交推送 `main` 并确认 Actions 部署成功：已完成（提交 `3e04e89`）。
-4. 线上确认 `https://humpy.site/nightmend/` 返回 404、首页正常：已完成。
+1. 放置游戏文件并配置 `skip_render`：已完成。
+2. 本地构建确认 `public/myturn/index.html` 与源文件一致：进行中。
+3. 提交并推送 `main`，等待 GitHub Actions 部署：待完成。
+4. 线上验证 `https://humpy.site/myturn/`：待完成。
+5. 用户试玩后下架：待用户通知。
 
 ## 下一步
 
-本轮下架已完成，无后续事项。
+本地构建，然后提交推送并跟踪 Actions。
 
 ## 测试、Review、Commit 和交付门禁
 
-- 测试：`npx hexo generate` 成功，`public/` 下没有 `nightmend/`。
-- 真实验证：线上 `/nightmend/` 返回 404，首页返回 200。
-- Review：确认改动只有删除游戏文件、撤回一行配置和两份计划文档。
+- 测试：`npx hexo generate` 成功，`public/myturn/index.html` 与源文件逐字节一致。
+- 真实验证：线上地址在横屏视口能进入对局，无控制台报错与失败请求。
+- Review：确认改动只有游戏文件、`_config.yml` 一行配置和两份计划文档。
 - Commit：本轮一次提交并推送 `main`。
-- 交付门禁：线上确认下架后才算完成。
+- 交付门禁：线上地址可访问且实测通过，才算完成。
